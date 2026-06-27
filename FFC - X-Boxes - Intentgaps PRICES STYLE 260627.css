@@ -1,0 +1,94 @@
+<!-- COMPLETE PRICES SECTION PART 1: CSS & CARDS 1-4 -->
+<style>
+  .m-b-h-wrapper-comb {
+    width: 100% !important;
+    background-color: #f3f3f3 !important; 
+    padding: 20px 0 !important;
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+  .m-b-h-container-comb {
+    width: 100% !important;
+    max-width: 1200px !important; 
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important; 
+    box-sizing: border-box !important;
+  }
+  .s-t-c-comb {
+    background: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    box-sizing: border-box !important;
+    flex: 1 1 calc(33.333% - 10px) !important;
+    min-width: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+  .s-t-c-body-comb {
+    padding: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    text-align: left !important;
+  }
+  .s-t-c-body-comb h3 {
+    font-size: 15px !important; 
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin: 0 0 10px 0 !important;
+    color: #111111 !important;
+  }
+  .s-t-c-exp-toggle-comb {
+    display: none !important;
+  }
+  .s-t-c-exp-content-comb {
+    max-height: 110px !important; 
+    overflow: hidden !important;
+    transition: max-height 0.4s ease-out !important;
+  }
+  .s-t-c-body-comb p {
+    font-size: 12.5px !important; 
+    line-height: 1.45 !important;
+    margin: 0 0 15px 0 !important;
+    color: #444444 !important;
+  }
+  .s-t-c-body-comb a {
+    color: #f79c5e !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+  }
+  .s-t-c-footer-comb {
+    padding: 0 15px 15px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-top: auto !important; 
+  }
+  .s-t-c-btn-comb {
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    color: #f79c5e !important;
+    text-decoration: underline !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+  }
+  .s-t-c-btn-comb::before {
+    content: "Read More ?" !important;
+  }
+  .s-t-c-exp-toggle-comb:checked ~ .m-b-h-container-comb .s-t-c-exp-content-comb {
+    max-height: 2500px !important; 
+  }
+  .s-t-c-exp-toggle-comb:checked ~ .m-b-h-container-comb .s-t-c-btn-comb {
+    color: #777777 !important;
+  }
+  .s-t-c-exp-toggle-comb:checked ~ .m-b-h-container-comb .s-t-c-btn-comb::before {
+    content: "Read Less ?" !important;
+  }
+  @media screen and (max-width: 767px) {
+    .s-t-c-comb { flex: 1 1 100% !important; }
+  }
+</style>
