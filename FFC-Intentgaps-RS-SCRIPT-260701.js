@@ -1,18 +1,3 @@
-<!-- ==========================================================================
-     1. SYSTEM TEXT MODAL HOUSING ELEMENTS (Decoupled Namespace Tree)
-     ========================================================================== -->
-<div class="modal-txt-engine" id="textGridModalOnly">
-  <div class="modal-content-txt">
-    <span class="modal-close-txt" id="closeTextModalOnly">&times;</span>
-    <!-- Local distinct data mount nodes -->
-    <h2 id="modalHeadingTextOnly" style="font-size: 20px !important; font-weight: 700 !important; color: #111111 !important; margin: 0 0 15px 0 !important; line-height: 1.4 !important; text-align: left !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;"></h2>
-    <div id="modalBodyTextOnly" style="font-size: 14.5px !important; line-height: 1.6 !important; color: #333333 !important; text-align: left !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;"></div>
-  </div>
-</div>
-
-<!-- ==========================================================================
-     2. ISOLATED CONTROLLER SCRIPT ENGINE (Protects Carousel Scopes)
-     ========================================================================== -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   (function() {
