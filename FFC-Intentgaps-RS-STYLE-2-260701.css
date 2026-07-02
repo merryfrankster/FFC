@@ -1,0 +1,102 @@
+<!-- DYNAMIC INTENTGAPS OVERLAY ENGINE - Decoupled CSS STYLESHEET -->
+<style>
+  /* 1. TEXT CARD LINE CLAMP & ELLIPSIS MARKER CONTROLS */
+  .s-t-c-exp-content-comb {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 5 !important; 
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; 
+    max-height: 110px !important; 
+    transition: max-height 0.4s ease-out !important;
+  }
+
+  /* 2. TEXT LINK STYLING LAW SIGNALS */
+  .modal-trigger-btn {
+    color: #f79c5e !important;          
+    text-decoration: underline !important; 
+    font-weight: 600 !important;
+    font-size: 11.5px !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;          
+    display: inline-block !important;
+    margin-top: 5px !important;
+  }
+
+  /* 3. ISOLATED OVERLAY CANVAS BACKGROUND (SCROLL WINDOW SAFE) */
+  #textGridModalOnly.modal-txt-engine {
+    display: none; 
+    position: fixed !important;
+    z-index: 999999 !important; /* Kept extremely high to override background graphics safely */
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    overflow-y: auto !important;          /* Keeps scrollbar controls visible when needed */
+    padding: 30px 10px !important;       
+  }
+  
+  /* Localized activation state rule pass */
+  #textGridModalOnly.text-modal-active {
+    display: flex !important; 
+  }
+
+  /* 4. REPROPORTIONED DESKTOP BOX CONTAINER (Exact 75% Scale Optimization) */
+  #textGridModalOnly .modal-content-txt {
+    background-color: #ffffff !important;
+    padding: 25px !important;
+    border-radius: 8px !important;
+    position: relative !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+    
+    /* Hardcoded to 450px to guarantee clean text column columns aspect ratios */
+    width: 450px !important; 
+    max-width: 85vw !important;
+    margin: auto !important;             
+  }
+
+  /* 5. MOBILE SMARTPHONE HANDHELD VIEWPANELS BUFFER MAP */
+  @media (max-width: 768px) {
+    #textGridModalOnly .modal-content-txt {
+      max-width: 96% !important;
+      width: 100% !important;
+      padding: 18px !important;
+    }
+  }
+
+  /* 6. MODAL ELEMENT INNER WORD WRAPPING PROTECTION */
+  #textGridModalOnly #modalBodyTextOnly {
+    width: 0 !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  #textGridModalOnly #modalBodyTextOnly p {
+    margin: 0 0 15px 0 !important;
+  }
+  #textGridModalOnly #modalBodyTextOnly p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* 7. ISOLATED CLOSE CONTROLS SIGNALS */
+  #textGridModalOnly .modal-close-txt {
+    position: absolute !important;
+    top: 5px !important;
+    right: 15px !important;
+    font-size: 28px !important;
+    cursor: pointer !important;
+    color: #777777 !important;
+    z-index: 11000 !important;
+    font-family: sans-serif !important;
+  }
+  #textGridModalOnly .modal-close-txt:hover {
+    color: #000000 !important;
+  }
+</style>
