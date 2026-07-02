@@ -1,0 +1,250 @@
+/* ==========================================================================
+   FRANK'S FRIENDLY CARS MAUI - UNIFIED PLATFORM GRIDS & OVERLAYS STYLESHEET
+   PRODUCTION DEPLOYMENT STAMP: 2026-07-01
+   ========================================================================== */
+
+/* ==========================================================================
+   FLOOR 1: TYPOGRAPHY, BRAND COLORS & VERTICAL LINE CLAMPING
+   ========================================================================== */
+.s-t-c-body-comb {
+  padding: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  text-align: left !important;
+}
+
+/* SEMANTIC HEADING UPGRADE NODE: Controls level typography on your h2 text questions */
+.s-t-c-body-comb h2 {
+  font-size: 15px !important; 
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 10px 0 !important;
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.s-t-c-body-comb p {
+  font-size: 12.5px !important; 
+  line-height: 1.45 !important;
+  margin: 0 0 15px 0 !important;
+  color: #444444 !important;
+  text-align: left !important;
+}
+
+.s-t-c-body-comb a {
+  color: #f79c5e !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+/* Dynamic CSS Text Clamping - Truncates content natively at exactly 5 text rows */
+.s-t-c-exp-content-comb {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important; 
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; /* Appends a crisp trailing ... continuation trail */
+  max-height: 110px !important; 
+}
+
+/* Re-establishes your interactive brand coral link button pointer interface */
+.modal-trigger-btn {
+  color: #f79c5e !important;          
+  text-decoration: underline !important; 
+  font-weight: 600 !important;
+  font-size: 11.5px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;          /* Restores active hand-pointer on user hover states */
+  display: inline-block !important;
+  margin-top: auto !important;
+  padding-top: 5px !important;
+}
+
+/* ==========================================================================
+   FLOOR 2: DECOUPLED TEXT LIGHTBOX OVERLAY WINDOW (SCROLL-SAFE ENGINE)
+   ========================================================================== */
+#textGridModalOnly.modal-txt-engine {
+  display: none; 
+  position: fixed !important;
+  z-index: 999999 !important; /* Kept extremely high to sit above carousels and template headers */
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  
+  /* Fallback scroll footprint layer protects display limits on low screen resolutions */
+  overflow-y: auto !important;          
+  padding: 30px 10px !important;       
+}
+
+/* Activated smoothly via class list modifiers inside your DOM script listener */
+#textGridModalOnly.text-modal-active {
+  display: flex !important; 
+}
+
+/* Proportioned Lightbox Box Container (Locked exactly to your 75% wide desktop spec) */
+#textGridModalOnly .modal-content-txt {
+  background-color: #ffffff !important;
+  padding: 25px !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  box-sizing: border-box !important;
+  width: 450px !important; 
+  max-width: 85vw !important;
+  margin: auto !important;             
+}
+
+/* Modal Inner Body Wrapping Shield */
+#textGridModalOnly #modalBodyTextOnly {
+  width: 0 !important;
+  min-width: 100% !important;
+  box-sizing: border-box !important;
+}
+#textGridModalOnly #modalBodyTextOnly p { margin: 0 0 15px 0 !important; }
+#textGridModalOnly #modalBodyTextOnly p:last-child { margin-bottom: 0 !important; }
+
+/* Lightbox User Interface Interface Close Controls */
+#textGridModalOnly .modal-close-txt {
+  position: absolute !important;
+  top: 5px !important;
+  right: 15px !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  color: #777777 !important;
+  z-index: 11000 !important;
+  font-family: sans-serif !important;
+}
+#textGridModalOnly .modal-close-txt:hover { color: #000000 !important; }
+
+
+/* ==========================================================================
+   FLOOR 3: DYNAMIC LAYOUT CONTAINERS (Prices Grid & Policies Hybrid Tracker)
+   ========================================================================== */
+/* Master Structural Row Wrappers */
+.m-b-h-wrapper-comb,
+.pol-slider-wrapper {
+  width: 100% !important;
+  background-color: #f3f3f3 !important; 
+  padding: 20px 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Row Spacing Compactors: Pulls preceding elements vertically up against page sections */
+.pol-slider-wrapper.p-grid-bottom {
+  margin-top: -85px !important; /* Configured to your verified sweet-spot padding metric */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.m-b-h-container-comb,
+.pol-slider-container {
+  width: 100% !important;
+  max-width: 1200px !important; 
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important; 
+  box-sizing: border-box !important;
+}
+
+/* Hardlocked Desktop Card Base - Middle value set to 0 to completely halt box squishing */
+.m-b-h-container-comb .s-t-c-comb,
+.pol-slider-container .s-t-c-comb {
+  background: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+  box-sizing: border-box !important;
+  flex: 0 0 calc(33.333% - 10px) !important; 
+  min-width: 280px !important; /* Establishes a hardware floor to protect typographic layouts */
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.s-t-c-footer-comb {
+  padding: 0 15px 15px 15px !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-top: auto !important; 
+}
+
+
+/* ==========================================================================
+   FLOOR 4: HARDWARE-FILTERED SMARTPHONE SLIDER CHANNELS (Touch Screen Phones Only)
+   ========================================================================== */
+@media screen and (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  /* Compresses mobile stacking layouts to isolate vertical whitespace fatigue */
+  .pol-slider-wrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .pol-slider-wrapper.p-grid-bottom {
+    margin-top: -85px !important; /* Verified value maintains clean horizontal channel spacing */
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* Collapses vertical box grids into single, fluid horizontal touch scroll tracks */
+  .pol-slider-container {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important; /* Native iOS momentum swiping physics */
+    padding: 0 20px 15px 20px !important;
+    gap: 15px !important;
+    scrollbar-width: none !important; /* Hides raw mobile default scrollbar tracks on display panels */
+    -ms-overflow-style: none !important;
+  }
+  .pol-slider-container::-webkit-scrollbar { display: none !important; }
+
+  /* Locks the swipe card width container boundaries on narrow mobile glass frames */
+  .pol-slider-container .s-t-c-comb {
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    scroll-snap-align: center !important; /* Instantly snaps swiped boxes directly into clear screen focus */
+    scroll-snap-stop: always !important;
+  }
+}
+
+
+/* ==========================================================================
+   FLOOR 5: NARROW DESKTOP MOUSE WINDOW FALLBACK TRACKS (Desktops Without Touch)
+   ========================================================================== */
+@media screen and (max-width: 768px) and (hover: hover) {
+  .m-b-h-container-comb,
+  .pol-slider-container {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 15px !important;
+  }
+  
+  /* Generates a clean, visible horizontal scroll bar to allow standard mouse navigation */
+  .m-b-h-container-comb::-webkit-scrollbar,
+  .pol-slider-container::-webkit-scrollbar {
+    display: block !important;
+    height: 8px !important;
+  }
+  .m-b-h-container-comb::-webkit-scrollbar-thumb,
+  .pol-slider-container::-webkit-scrollbar-thumb {
+    background-color: #dee2e6 !important;
+    border-radius: 10px !important;
+  }
+  .m-b-h-container-comb .s-t-c-comb,
+  .pol-slider-container .s-t-c-comb {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+  }
+}
