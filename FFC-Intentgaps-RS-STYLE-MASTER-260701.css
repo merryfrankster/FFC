@@ -1,22 +1,24 @@
-<style>
 /* ==========================================================================
    FRANK'S FRIENDLY CARS MAUI - UNIFIED PLATFORM GRIDS & OVERLAYS STYLESHEET
-   PRODUCTION DEPLOYMENT STAMP: 2026-07-01
-   ========================================================================== */
+   PRODUCTION DEPLOYMENT COMPILATION | WORKSTATION STAGING ENVIRONMENT
+   ========================================================================= */
 
 /* ==========================================================================
-   FLOOR 1: TYPOGRAPHY, BRAND COLORS & VERTICAL LINE CLAMPING
+   FLOOR 1: CARD INTERNAL TEXT FRAMING, BRAND INTERFACES & ELLIPSIS CLAMPING
    ========================================================================== */
 .s-t-c-body-comb {
-  padding: 15px !important;
+  padding: 15px !important;       /* Restores your crisp, uniform 15px text cushion borders */
   display: flex !important;
   flex-direction: column !important;
   flex-grow: 1 !important;
   text-align: left !important;
+  box-sizing: border-box !important;
 }
 
-/* SEMANTIC HEADING UPGRADE NODE: Controls level typography on your h2 text questions */
-.s-t-c-body-comb h2 {
+/* TYPOGRAPHY MATRIX SEGMENT: Enforces strict uniform formatting across h2, h3, and h4 */
+.s-t-c-body-comb h2,
+.s-t-c-body-comb h3,
+.s-t-c-body-comb h4 {
   font-size: 15px !important; 
   font-weight: 700 !important;
   line-height: 1.3 !important;
@@ -39,36 +41,37 @@
   font-weight: 600 !important;
 }
 
-/* Dynamic CSS Text Clamping - Truncates content natively at exactly 5 text rows */
+/* Dynamic CSS Text Clamping - Webkit box algorithm limits visibility to exactly 5 lines */
 .s-t-c-exp-content-comb {
   display: -webkit-box !important;
   -webkit-line-clamp: 5 !important; 
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
-  text-overflow: ellipsis !important; /* Appends a crisp trailing ... continuation trail */
+  text-overflow: ellipsis !important; /* Appends the crisp trailing ... continuation marker */
   max-height: 110px !important; 
 }
 
-/* Re-establishes your interactive brand coral link button pointer interface */
+/* Restores your signature brand coral interactive link button layout interface */
 .modal-trigger-btn {
   color: #f79c5e !important;          
   text-decoration: underline !important; 
   font-weight: 600 !important;
   font-size: 11.5px !important;
   text-transform: uppercase !important;
-  cursor: pointer !important;          /* Restores active hand-pointer on user hover states */
+  cursor: pointer !important;          /* Displays active finger-pointer cursor instantly on hover */
   display: inline-block !important;
   margin-top: auto !important;
   padding-top: 5px !important;
 }
 
+
 /* ==========================================================================
    FLOOR 2: DECOUPLED TEXT LIGHTBOX OVERLAY WINDOW (SCROLL-SAFE ENGINE)
-   ========================================================================== */
+   ========================================================================= */
 #textGridModalOnly.modal-txt-engine {
   display: none; 
   position: fixed !important;
-  z-index: 999999 !important; /* Kept extremely high to sit above carousels and template headers */
+  z-index: 999999 !important; /* Fixed height overrides background carousels and sticky headers */
   left: 0 !important;
   top: 0 !important;
   width: 100% !important;
@@ -78,17 +81,17 @@
   justify-content: center !important;
   box-sizing: border-box !important;
   
-  /* Fallback scroll footprint layer protects display limits on low screen resolutions */
+  /* Fallback scroll track engine safeguards visibility limits on small screens */
   overflow-y: auto !important;          
   padding: 30px 10px !important;       
 }
 
-/* Activated smoothly via class list modifiers inside your DOM script listener */
+/* Switched on instantly via class list tokens inside your script listener */
 #textGridModalOnly.text-modal-active {
   display: flex !important; 
 }
 
-/* Proportioned Lightbox Box Container (Locked exactly to your 75% wide desktop spec) */
+/* Proportioned Overlay Box Container (Locked exactly to your 75% wide desktop spec) */
 #textGridModalOnly .modal-content-txt {
   background-color: #ffffff !important;
   padding: 25px !important;
@@ -104,7 +107,7 @@
   margin: auto !important;             
 }
 
-/* Modal Inner Body Wrapping Shield */
+/* Modal Inner Body Text Alignment Shield */
 #textGridModalOnly #modalBodyTextOnly {
   width: 0 !important;
   min-width: 100% !important;
@@ -113,7 +116,7 @@
 #textGridModalOnly #modalBodyTextOnly p { margin: 0 0 15px 0 !important; }
 #textGridModalOnly #modalBodyTextOnly p:last-child { margin-bottom: 0 !important; }
 
-/* Lightbox User Interface Interface Close Controls */
+/* Lightbox Closing Trigger Mechanics */
 #textGridModalOnly .modal-close-txt {
   position: absolute !important;
   top: 5px !important;
@@ -128,9 +131,9 @@
 
 
 /* ==========================================================================
-   FLOOR 3: DYNAMIC LAYOUT CONTAINERS (Prices Grid & Policies Hybrid Tracker)
+   FLOOR 3: DYNAMIC LAYOUT CONTAINERS (Prices Grid & Policies Hybrid Tracks)
    ========================================================================== */
-/* Master Structural Row Wrappers */
+/* Master Row Wrappers */
 .m-b-h-wrapper-comb,
 .pol-slider-wrapper {
   width: 100% !important;
@@ -139,9 +142,9 @@
   box-sizing: border-box !important;
 }
 
-/* Row Spacing Compactors: Pulls preceding elements vertically up against page sections */
+/* Row Margin Compactors: Welds desktop grid frames together with unshifted pixel spaces */
 .pol-slider-wrapper.p-grid-bottom {
-  margin-top: -85px !important; /* Configured to your verified sweet-spot padding metric */
+  margin-top: -85px !important; /* Hardlocked to your verified sweet-spot padding configuration */
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -158,7 +161,7 @@
   box-sizing: border-box !important;
 }
 
-/* Hardlocked Desktop Card Base - Middle value set to 0 to completely halt box squishing */
+/* Fixed Card Matrix Setup - Middle shrink value set to 0 to completely halt box squishing */
 .m-b-h-container-comb .s-t-c-comb,
 .pol-slider-container .s-t-c-comb {
   background: #ffffff !important;
@@ -167,7 +170,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
   box-sizing: border-box !important;
   flex: 0 0 calc(33.333% - 10px) !important; 
-  min-width: 280px !important; /* Establishes a hardware floor to protect typographic layouts */
+  min-width: 280px !important; /* Fixed base floor protects your typography lines */
   display: flex !important;
   flex-direction: column !important;
   overflow: hidden !important;
@@ -182,10 +185,10 @@
 
 
 /* ==========================================================================
-   FLOOR 4: HARDWARE-FILTERED SMARTPHONE SLIDER CHANNELS (Touch Screen Phones Only)
+   FLOOR 4: HARDWARE-FILTERED MOBILE SMARTPHONE SLIDER TRACKS (Real Touch Phones)
    ========================================================================== */
 @media screen and (max-width: 768px) and (hover: none) and (pointer: coarse) {
-  /* Compresses mobile stacking layouts to isolate vertical whitespace fatigue */
+  /* Compresses padding cushions to remove heavy whitespace stacking layout loops */
   .pol-slider-wrapper {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
@@ -193,36 +196,36 @@
     margin-bottom: 0 !important;
   }
   .pol-slider-wrapper.p-grid-bottom {
-    margin-top: -85px !important; /* Verified value maintains clean horizontal channel spacing */
+    margin-top: -85px !important; /* Re-establishes pristine cross-platform spacing height symmetry */
     padding-top: 0 !important;
     padding-bottom: 10px !important;
   }
 
-  /* Collapses vertical box grids into single, fluid horizontal touch scroll tracks */
+  /* Shifles vertical box rows into smooth horizontal touch swipe track channels */
   .pol-slider-container {
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important; /* Native iOS momentum swiping physics */
+    -webkit-overflow-scrolling: touch !important; /* Native iOS momentum swiping physics for mobile Safari */
     padding: 0 20px 15px 20px !important;
     gap: 15px !important;
-    scrollbar-width: none !important; /* Hides raw mobile default scrollbar tracks on display panels */
+    scrollbar-width: none !important; /* Hides default mobile browser horizontal slider tracks */
     -ms-overflow-style: none !important;
   }
   .pol-slider-container::-webkit-scrollbar { display: none !important; }
 
-  /* Locks the swipe card width container boundaries on narrow mobile glass frames */
+  /* Card boundary anchors inside the mobile horizontal touch swipe track layout channels */
   .pol-slider-container .s-t-c-comb {
     flex: 0 0 85% !important;
     width: 85% !important;
-    scroll-snap-align: center !important; /* Instantly snaps swiped boxes directly into clear screen focus */
+    scroll-snap-align: center !important; /* Snaps cards cleanly to the center of smartphone viewports */
     scroll-snap-stop: always !important;
   }
 }
 
 
 /* ==========================================================================
-   FLOOR 5: NARROW DESKTOP MOUSE WINDOW FALLBACK TRACKS (Desktops Without Touch)
+   FLOOR 5: NARROW DESKTOP WINDOW FALLBACK SCROLLBARS (Mice Browsers Without Touch)
    ========================================================================== */
 @media screen and (max-width: 768px) and (hover: hover) {
   .m-b-h-container-comb,
@@ -232,7 +235,7 @@
     padding-bottom: 15px !important;
   }
   
-  /* Generates a clean, visible horizontal scroll bar to allow standard mouse navigation */
+  /* Generates a clean browser mouse scroll track at the bottom row frame zone */
   .m-b-h-container-comb::-webkit-scrollbar,
   .pol-slider-container::-webkit-scrollbar {
     display: block !important;
@@ -249,4 +252,3 @@
     width: 300px !important;
   }
 }
-</style>
