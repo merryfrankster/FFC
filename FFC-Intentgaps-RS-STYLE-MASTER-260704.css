@@ -252,8 +252,7 @@
     width: 300px !important;
   }
 }
-</style>
-<style>
+
 /* ==========================================================================
    RATE TABLE FORMATTING
    ========================================================================== */
@@ -341,8 +340,7 @@
     display: inline-block !important;
     flex-shrink: 0 !important;
   }
-</style>
-<style>
+
 /* ==========================================================================
    PRODUCTION LIGHTBOX OVERRIDE: Tabulated Data Controls for Mobile Viewports
    ========================================================================== */
@@ -365,5 +363,3 @@
     width: calc(100% + 6px) !important; /* Realignment pass for the black divider line */
   }
 }
-
-</style>
