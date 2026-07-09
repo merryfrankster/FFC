@@ -1,0 +1,365 @@
+/* ==========================================================================
+   FRANK'S FRIENDLY CARS MAUI - UNIFIED PLATFORM GRIDS & OVERLAYS STYLESHEET
+   PRODUCTION DEPLOYMENT COMPILATION | WORKSTATION STAGING ENVIRONMENT
+   ========================================================================= */
+
+/* ==========================================================================
+   FLOOR 1: CARD INTERNAL TEXT FRAMING, BRAND INTERFACES & ELLIPSIS CLAMPING
+   ========================================================================== */
+.s-t-c-body-comb {
+  padding: 15px !important;       /* Restores your crisp, uniform 15px text cushion borders */
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+/* TYPOGRAPHY MATRIX SEGMENT: Enforces strict uniform formatting across h2, h3, and h4 */
+.s-t-c-body-comb h2,
+.s-t-c-body-comb h3,
+.s-t-c-body-comb h4 {
+  font-size: 15px !important; 
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin: 0 0 10px 0 !important;
+  color: #111111 !important;
+  text-align: left !important;
+}
+
+.s-t-c-body-comb p {
+  font-size: 12.5px !important; 
+  line-height: 1.45 !important;
+  margin: 0 0 15px 0 !important;
+  color: #444444 !important;
+  text-align: left !important;
+}
+
+.s-t-c-body-comb a {
+  color: #f79c5e !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+/* Dynamic CSS Text Clamping - Webkit box algorithm limits visibility to exactly 5 lines */
+.s-t-c-exp-content-comb {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important; 
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; /* Appends the crisp trailing ... continuation marker */
+  max-height: 110px !important; 
+}
+
+/* Restores your signature brand coral interactive link button layout interface */
+.modal-trigger-btn {
+  color: #f79c5e !important;          
+  text-decoration: underline !important; 
+  font-weight: 600 !important;
+  font-size: 11.5px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;          /* Displays active finger-pointer cursor instantly on hover */
+  display: inline-block !important;
+  margin-top: auto !important;
+  padding-top: 5px !important;
+}
+
+
+/* ==========================================================================
+   FLOOR 2: DECOUPLED TEXT LIGHTBOX OVERLAY WINDOW (SCROLL-SAFE ENGINE)
+   ========================================================================= */
+#textGridModalOnly.modal-txt-engine {
+  display: none; 
+  position: fixed !important;
+  z-index: 999999 !important; /* Fixed height overrides background carousels and sticky headers */
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  
+  /* Fallback scroll track engine safeguards visibility limits on small screens */
+  overflow-y: auto !important;          
+  padding: 30px 10px !important;       
+}
+
+/* Switched on instantly via class list tokens inside your script listener */
+#textGridModalOnly.text-modal-active {
+  display: flex !important; 
+}
+
+/* Proportioned Overlay Box Container (Locked exactly to your 75% wide desktop spec) */
+#textGridModalOnly .modal-content-txt {
+  background-color: #ffffff !important;
+  padding: 25px !important;
+  border-radius: 8px !important;
+  position: relative !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  box-sizing: border-box !important;
+  width: 450px !important; 
+  max-width: 85vw !important;
+  margin: auto !important;             
+}
+
+/* Modal Inner Body Text Alignment Shield */
+#textGridModalOnly #modalBodyTextOnly {
+  width: 0 !important;
+  min-width: 100% !important;
+  box-sizing: border-box !important;
+}
+#textGridModalOnly #modalBodyTextOnly p { margin: 0 0 15px 0 !important; }
+#textGridModalOnly #modalBodyTextOnly p:last-child { margin-bottom: 0 !important; }
+
+/* Lightbox Closing Trigger Mechanics */
+#textGridModalOnly .modal-close-txt {
+  position: absolute !important;
+  top: 5px !important;
+  right: 15px !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  color: #777777 !important;
+  z-index: 11000 !important;
+  font-family: sans-serif !important;
+}
+#textGridModalOnly .modal-close-txt:hover { color: #000000 !important; }
+
+
+/* ==========================================================================
+   FLOOR 3: DYNAMIC LAYOUT CONTAINERS (Prices Grid & Policies Hybrid Tracks)
+   ========================================================================== */
+/* Master Row Wrappers */
+.m-b-h-wrapper-comb,
+.pol-slider-wrapper {
+  width: 100% !important;
+  background-color: #f3f3f3 !important; 
+  padding: 20px 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Row Margin Compactors: Welds desktop grid frames together with unshifted pixel spaces */
+.pol-slider-wrapper.p-grid-bottom {
+  margin-top: -85px !important; /* Hardlocked to your verified sweet-spot padding configuration */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.m-b-h-container-comb,
+.pol-slider-container {
+  width: 100% !important;
+  max-width: 1200px !important; 
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important; 
+  box-sizing: border-box !important;
+}
+
+/* Fixed Card Matrix Setup - Middle shrink value set to 0 to completely halt box squishing */
+.m-b-h-container-comb .s-t-c-comb,
+.pol-slider-container .s-t-c-comb {
+  background: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+  box-sizing: border-box !important;
+  flex: 0 0 calc(33.333% - 10px) !important; 
+  min-width: 280px !important; /* Fixed base floor protects your typography lines */
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.s-t-c-footer-comb {
+  padding: 0 15px 15px 15px !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-top: auto !important; 
+}
+
+
+/* ==========================================================================
+   FLOOR 4: HARDWARE-FILTERED MOBILE SMARTPHONE SLIDER TRACKS (Real Touch Phones)
+   ========================================================================== */
+@media screen and (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  /* Compresses padding cushions to remove heavy whitespace stacking layout loops */
+  .pol-slider-wrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .pol-slider-wrapper.p-grid-bottom {
+    margin-top: -85px !important; /* Re-establishes pristine cross-platform spacing height symmetry */
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* Shifles vertical box rows into smooth horizontal touch swipe track channels */
+  .pol-slider-container {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important; /* Native iOS momentum swiping physics for mobile Safari */
+    padding: 0 20px 15px 20px !important;
+    gap: 15px !important;
+    scrollbar-width: none !important; /* Hides default mobile browser horizontal slider tracks */
+    -ms-overflow-style: none !important;
+  }
+  .pol-slider-container::-webkit-scrollbar { display: none !important; }
+
+  /* Card boundary anchors inside the mobile horizontal touch swipe track layout channels */
+  .pol-slider-container .s-t-c-comb {
+    flex: 0 0 85% !important;
+    width: 85% !important;
+    scroll-snap-align: center !important; /* Snaps cards cleanly to the center of smartphone viewports */
+    scroll-snap-stop: always !important;
+  }
+}
+
+
+/* ==========================================================================
+   FLOOR 5: NARROW DESKTOP WINDOW FALLBACK SCROLLBARS (Mice Browsers Without Touch)
+   ========================================================================== */
+@media screen and (max-width: 768px) and (hover: hover) {
+  .m-b-h-container-comb,
+  .pol-slider-container {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 15px !important;
+  }
+  
+  /* Generates a clean browser mouse scroll track at the bottom row frame zone */
+  .m-b-h-container-comb::-webkit-scrollbar,
+  .pol-slider-container::-webkit-scrollbar {
+    display: block !important;
+    height: 8px !important;
+  }
+  .m-b-h-container-comb::-webkit-scrollbar-thumb,
+  .pol-slider-container::-webkit-scrollbar-thumb {
+    background-color: #dee2e6 !important;
+    border-radius: 10px !important;
+  }
+  .m-b-h-container-comb .s-t-c-comb,
+  .pol-slider-container .s-t-c-comb {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+  }
+}
+
+/* ==========================================================================
+   RATE TABLE FORMATTING
+   ========================================================================== */
+.maui-rate-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: separate;
+  border-spacing: 12px 0px; 
+  background-color: transparent;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.maui-rate-table td {
+  background-color: transparent;
+  padding: 0;
+  text-align: left;
+  line-height: 1.4;
+  color: #333;
+}
+
+.maui-rate-table th {
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  padding-bottom: 6px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Continuous clean line under the header row */
+.maui-rate-table th::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 12px); 
+  height: 1px;
+  background-color: #000;
+}
+
+/* Prevents the line from bleeding past the final column */
+.maui-rate-table th:nth-child(3)::after {
+  width: 100%;
+}
+
+.sold-out {
+  color: #cc0000 !important;
+  font-weight: bold;
+}
+/* ==========================================================================
+   BULLET LIST WITH CHECKMARK
+   ========================================================================== */
+  /* Shortened Trust Perks List */
+  .trust-perks-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .trust-perks-list li {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #111111 !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important; 
+    line-height: 1.3 !important;
+    text-align: left !important;
+  }
+
+  /* Clean Brand-Matched Checkmarks */
+  .trust-perks-list li::before {
+    content: "\2713" !important; 
+    color: #f2995d !important; 
+    font-weight: 900 !important;
+    margin-right: 10px !important;
+    font-size: 15px !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+  }
+
+/* ==========================================================================
+   PRODUCTION LIGHTBOX OVERRIDE: Tabulated Data Controls for Mobile Viewports
+   ========================================================================== */
+/* ADD TO MASTER STYLE SHEET */
+#textGridModalOnly .modal-content-txt {
+  max-height: 85vh !important; /* Prevents long lists like Card 12 from running off screen edges */
+  overflow-y: auto !important; /* Adds smooth internal vertical scrollbars to the popup box */
+}
+
+@media screen and (max-width: 480px) {
+  /* Compresses cell gaps inside the mobile popup modal to prevent horizontal panel blowout */
+  #textGridModalOnly .maui-rate-table {
+    border-spacing: 6px 0px !important; /* Cuts horizontal cell margins in half for narrow screens */
+    font-size: 13px !important;         /* Scales text down slightly to guarantee 100% column visibility */
+  }
+  #textGridModalOnly .maui-rate-table th {
+    font-size: 11px !important;
+  }
+  #textGridModalOnly .maui-rate-table th::after {
+    width: calc(100% + 6px) !important; /* Realignment pass for the black divider line */
+  }
+}
