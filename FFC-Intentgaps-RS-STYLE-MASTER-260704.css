@@ -308,7 +308,9 @@
   color: #cc0000 !important;
   font-weight: bold;
 }
-
+/* ==========================================================================
+   BULLET LIST WITH CHECKMARK
+   ========================================================================== */
   /* Shortened Trust Perks List */
   .trust-perks-list {
     list-style: none !important;
