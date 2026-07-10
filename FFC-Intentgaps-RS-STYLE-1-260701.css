@@ -1,4 +1,5 @@
-  /* 1. AGGRESSIVE SECTION COMPACTOR: Welds your text block to the orange bar */
+<style>
+/* 1. AGGRESSIVE SECTION COMPACTOR: Welds your text block to the orange bar */
   .m-b-h-title {
     margin-top: -50px !important;    /* Increased from -45px to completely erase the top system gap */
     margin-bottom: 15px !important;  /* Retains a clean, uniform separation layer right above your cards */
@@ -24,3 +25,4 @@
     color: #111111 !important;
     text-align: left !important;
   }
+</style>
