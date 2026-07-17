@@ -1,0 +1,97 @@
+/* ==========================================================================
+   PRODUCTION ENGINE OVERRIDE V9: FLAT DOM INSERTION LAYOUT
+   ========================================================================== */
+
+/* 1. COMPLETELY STRIPS OUT THE CONFLICTING MAIN BODY CONTROLS */
+body {
+  display: block !important;
+  flex-direction: unset !important;
+  min-height: unset !important;
+}
+
+/* 
+   2. HARDLOCKS YOUR CUSTOM MULTI-COLUMN CONTAINER SECTION 
+   Using block rendering controls allows your text cards to rest naturally 
+   inside the main page flow, completely eliminating doubled scrollbars!
+*/
+.custom-above-footer-section {
+  background-color: #e5e7eb !important; /* Premium minimalist light editorial gray */
+  border-top: 2px solid #111111 !important;
+  padding: 40px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  clear: both !important;
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+/* 3. MASTER LINK DIRECTORY ROW SETTINGS */
+.blended-footer-override-section {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hardlocks your 5-column layout alignment across desktop monitors */
+.footer-grid-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  justify-content: space-between !important;
+}
+
+/* Individual list layout columns - uses our flex-grow 0 rule to stop stretching */
+.footer-grid-column, 
+.custom-above-footer-section div[class*="MuiGrid-item"] {
+  flex: 0 0 calc(20% - 16px) !important; /* Perfect 5-column balance on wide displays */
+  min-width: 180px !important;
+  max-width: 240px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+/* Typography styles */
+.custom-above-footer-section h2,
+.custom-above-footer-section h4 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #111111 !important;
+  margin: 0 0 12px 0 !important;
+  border-bottom: 1px solid #111111 !important;
+  padding-bottom: 6px !important;
+  line-height: 1.3 !important;
+}
+
+.custom-above-footer-section p, 
+.custom-above-footer-section li {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: #444444 !important;
+  margin-bottom: 8px !important;
+}
+
+.custom-above-footer-section a {
+  color: #f79c5e !important; /* Your brand corporate orange accent color */
+  text-decoration: none !important;
+}
+.custom-above-footer-section a:hover {
+  text-decoration: underline !important;
+}
+
+/* Mobile responsive collapse track overrides */
+@media screen and (max-width: 768px) {
+  .footer-grid-row {
+    flex-direction: column !important;
+    gap: 25px !important;
+  }
+  .custom-above-footer-section div[class*="MuiGrid-item"] {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
