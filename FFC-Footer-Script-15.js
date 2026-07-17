@@ -23,23 +23,29 @@
             overlay.style.borderTop = '1px solid #111111';
             overlay.style.zIndex = '99999'; 
             
-            // 1. Pull content tightly under the divider line (10px padding top)
+            // Default desktop layout padding
             overlay.style.padding = '10px 20px 25px 20px';
             overlay.style.boxSizing = 'border-box';
             overlay.style.display = 'block';
 
-            // Clean typography rules tailored to your specifications
+            // Clean typography and layout stylesheet rules
             if (!document.getElementById('frank-typography-override-styles')) {
                 var css = 
-                    /* 2 & 4. Kill default bullet spacing, force absolute left alignment, and tighten list gaps */
+                    /* List cleanup: kill bullets and force absolute left alignment */
                     "#frank-overlay-footer ul { list-style: none !important; list-style-type: none !important; padding: 0 !important; margin: 4px 0 0 0 !important; text-align: left !important; } " +
                     "#frank-overlay-footer li { list-style: none !important; list-style-type: none !important; padding: 0 !important; margin: 0 0 6px 0 !important; text-align: left !important; } " +
-                    /* 3. Force plain text link decorations with custom color properties */
+                    /* Hyperlink specifications: no underline, transitions to coral on hover */
                     "#frank-overlay-footer a { text-decoration: none !important; color: #5A413F !important; transition: color 0.15s ease-in-out !important; display: inline-block !important; text-align: left !important; } " +
                     "#frank-overlay-footer a:hover { color: #f79c5e !important; text-decoration: none !important; } " +
-                    /* Tighten up heading layout boundaries */
+                    /* Tighten layout headings and paragraph structural boundaries */
                     "#frank-overlay-footer h4 { margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
-                    "#frank-overlay-footer p { text-align: left !important; margin-top: 0 !important; }";
+                    "#frank-overlay-footer p { text-align: left !important; margin-top: 0 !important; } " +
+                    
+                    /* MOBILE RESPONSIVE BREAKPOINT LAYER */
+                    "@media (max-width: 600px) { " +
+                    "  #frank-overlay-footer { padding: 20px 15px !important; } " +
+                    "  #frank-overlay-footer .frank-col { flex: 1 1 100% !important; max-width: 100% !important; margin-bottom: 24px !important; } " +
+                    "}";
                 
                 var styleNode = document.createElement('style');
                 styleNode.id = 'frank-typography-override-styles';
