@@ -1,0 +1,73 @@
+/* ==========================================================================
+   GLOBAL INJECTION GRID MATRIX & VISIBILITY ENGINE
+   ========================================================================== */
+
+/* The Canvas Wrapper - Styled with your premium gray background color layer */
+.custom-above-footer-section {
+  background-color: #e5e7eb !important; 
+  border-top: 2px solid #111111 !important;
+  padding: 40px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+/* Master row constraint tracker */
+.footer-grid-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  gap: 20px !important;
+  justify-content: space-between !important;
+}
+
+/* Individual list layout columns - hardlocked to prevent horizontal desktop stretching */
+.footer-grid-column {
+  flex: 0 0 calc(20% - 16px) !important; /* Perfect 5-column balance on wide displays */
+  min-width: 180px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+/* Typography styles */
+.footer-grid-column h4 {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #111111 !important;
+  margin: 0 0 12px 0 !important;
+  border-bottom: 1px solid #111111 !important;
+  padding-bottom: 6px !important;
+  line-height: 1.3 !important;
+}
+
+.footer-grid-column p,
+.footer-grid-column li {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: #444444 !important;
+  margin-bottom: 8px !important;
+}
+
+.footer-grid-column a {
+  color: #f79c5e !important; /* Your brand corporate orange accent color */
+  text-decoration: none !important;
+}
+.footer-grid-column a:hover {
+  text-decoration: underline !important;
+}
+
+/* Mobile responsive collapse track overrides */
+@media screen and (max-width: 768px) {
+  .footer-grid-row {
+    flex-direction: column !important;
+    gap: 25px !important;
+  }
+  .footer-grid-column {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+  }
+}
