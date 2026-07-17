@@ -18,13 +18,34 @@
             overlay.style.top = '0';
             overlay.style.left = '0';
             overlay.style.width = '100%';
-            overlay.style.height = 'auto'; // Let the height expand naturally with content
+            overlay.style.height = 'auto'; 
             overlay.style.backgroundColor = '#e5e7eb';
             overlay.style.borderTop = '1px solid #111111';
             overlay.style.zIndex = '99999'; 
-            overlay.style.padding = '40px 20px 25px 20px';
+            
+            // 1. Pull content tightly under the divider line (10px padding top)
+            overlay.style.padding = '10px 20px 25px 20px';
             overlay.style.boxSizing = 'border-box';
             overlay.style.display = 'block';
+
+            // Clean typography rules tailored to your specifications
+            if (!document.getElementById('frank-typography-override-styles')) {
+                var css = 
+                    /* 2 & 4. Kill default bullet spacing, force absolute left alignment, and tighten list gaps */
+                    "#frank-overlay-footer ul { list-style: none !important; list-style-type: none !important; padding: 0 !important; margin: 4px 0 0 0 !important; text-align: left !important; } " +
+                    "#frank-overlay-footer li { list-style: none !important; list-style-type: none !important; padding: 0 !important; margin: 0 0 6px 0 !important; text-align: left !important; } " +
+                    /* 3. Force plain text link decorations with custom color properties */
+                    "#frank-overlay-footer a { text-decoration: none !important; color: #5A413F !important; transition: color 0.15s ease-in-out !important; display: inline-block !important; text-align: left !important; } " +
+                    "#frank-overlay-footer a:hover { color: #f79c5e !important; text-decoration: none !important; } " +
+                    /* Tighten up heading layout boundaries */
+                    "#frank-overlay-footer h4 { margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
+                    "#frank-overlay-footer p { text-align: left !important; margin-top: 0 !important; }";
+                
+                var styleNode = document.createElement('style');
+                styleNode.id = 'frank-typography-override-styles';
+                styleNode.appendChild(document.createTextNode(css));
+                document.head.appendChild(styleNode);
+            }
 
             // PASTE YOUR RAW HTML COPY INSIDE THE BACKTICKS BELOW:
             var fullCustomHtml = `
