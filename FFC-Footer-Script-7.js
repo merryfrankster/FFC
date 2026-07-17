@@ -1,15 +1,15 @@
 /* ==========================================================================
-   FRANK'S FRIENDLY CARS MAUI - ENGINE V5: UNLIMITED CONTINUOUS INTENT LOCK
+   FRANK'S FRIENDLY CARS MAUI - AUTO-POLLING GLOBAL FOOTER ENGINE
    ========================================================================== */
 (function() {
   function injectFrankFooter() {
     // 1. UNIQUE IDENTIFIER SHIELD: Prevents duplicate injection loops
     if (document.getElementById("frank-global-above-footer")) return;
 
-    // 2. TARGET ANCHOR SELECTION: Finds the native UENI footer or alternative hooks
+    // 2. TARGET ANCHOR SELECTION: Finds the native UENI footer boundary block
     var nativeFooter = document.getElementById("footer") || document.querySelector("footer");
     
-    // 3. CONTINUOUS INTENT CHECK: If React hasn't painted yet, poll again indefinitely
+    // 3. CONTINUOUS POLL LOOP: If the element is missing, check again in 100ms
     if (!nativeFooter) {
       setTimeout(injectFrankFooter, 100); [stackoverflow.com]
       return;
@@ -24,13 +24,8 @@
     globalSection.innerHTML = `
       <div class="blended-footer-override-section">
         <div class="footer-grid-row">
-
-          <!-- 
-             ==========================================================================
-             YOUR EXACT PROVEN HTML MARKUP STORAGE ENGINE
-             Replace this placeholder block with your complete, original HTML link grid.
-             ==========================================================================
-          -->
+          <!-- Your exact original multi-column HTML grid code block executes directly here -->
+          <div style="text-align: center; padding: 20px; font-weight: 600; color: #111;">
                   <!-- COLUMN 1: BRAND COPY & CONCIERGE NAVIGATION -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1.3 1 200px !important; min-width: 200px !important; max-width: 260px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
 			        <h2>Frank's Friendly Cars<br>Maui Car Rental LLC</h2>
@@ -108,11 +103,10 @@
 			          <li><a href="https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/mini-van-used-150428710">Minivan</a></li>
 			         </ul>
                   </div>	
-
-
+          </div>
         </div>
         
-        <!-- COPYRIGHT BLOCK: Centered via block properties -->
+        <!-- COPYRIGHT BLOCK: Placed outside flex zones to force true horizontal centering -->
         <div style="width: 100% !important; display: block !important; clear: both !important; text-align: center !important; margin: 40px auto 0 auto !important; padding-top: 15px !important; border-top: 1px solid #d1d5db !important; box-sizing: border-box !important;">
           <p style="font-size: 12px !important; color: #5A413F !important; margin: 0 !important; font-weight: 500 !important; display: block !important; text-align: center !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;">
             &copy; 2026 Frank's Friendly Cars Maui Car Rental LLC. All Rights Reserved.
@@ -121,7 +115,7 @@
       </div>
     `;
 
-    // 6. THE RUNTIME INJECTION: Snaps your section directly above their link bar [stackoverflow.com]
+    // 6. THE RUNTIME INJECTION: Inserts your clean section right above their link bar [stackoverflow.com]
     nativeFooter.parentNode.insertBefore(globalSection, nativeFooter);
   }
 
