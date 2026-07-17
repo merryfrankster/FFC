@@ -9,7 +9,7 @@
     // 2. THE HIGHEST LAYER ROOT ANCHOR: Always exists instantly on page render
     var bodyRoot = document.body;
     if (!bodyRoot) {
-      setTimeout(injectFrankFooter, 50); [stackoverflow.com]
+      setTimeout(injectFrankFooter, 50); 
       return;
     }
 
