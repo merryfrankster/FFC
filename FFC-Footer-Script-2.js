@@ -85,7 +85,7 @@
              
                   <!-- COLUMN 5:  -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-                    <h3>Affordable <br>Older Cars</h3>
+                    <h3>Affordable Older Cars</h3>
                     <ul>
 			          <li><a href="https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/economy-car-used-150428705">Economy</a></li>
 			          <li><a href="https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/mid-size-car-used-150428709">Mid-size</a></li>
