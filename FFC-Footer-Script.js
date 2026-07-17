@@ -1,4 +1,3 @@
-<script type="text/javascript">
   (function() {
     // 1. UNIQUE IDENTIFIER SHIELD: 
     if (document.getElementById("frank-global-above-footer")) return;
@@ -111,4 +110,3 @@
     // 5. THE RUNTIME INJECTION: 
     nativeFooter.parentNode.insertBefore(globalSection, nativeFooter);
   })();
-</script>
