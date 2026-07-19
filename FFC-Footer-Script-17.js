@@ -38,7 +38,7 @@
                     "#frank-overlay-footer a { text-decoration: none !important; color: #5A413F !important; transition: color 0.15s ease-in-out !important; display: inline-block !important; text-align: left !important; } " +
                     "#frank-overlay-footer a:hover { color: #f79c5e !important; text-decoration: none !important; } " +
                     /* Tighten layout headings and paragraph structural boundaries */
-                    "#frank-overlay-footer h4 { margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
+                    "#frank-overlay-footer h2, #frank-overlay-footer h3, #frank-overlay-footer h4 { margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
                     "#frank-overlay-footer p { text-align: left !important; margin-top: 0 !important; } " +
                     
                     /* MOBILE RESPONSIVE BREAKPOINT LAYER */
@@ -94,7 +94,7 @@
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
                     <h3>Maui Car Rental Info</h3>
                     <ul>
-	                    <li><a href="https://mauicarrental.biz/cars-rates">Fllet & Rates</a></li>
+	                    <li><a href="https://mauicarrental.biz/cars-rates">Fleet & Rates</a></li>
 	                    <li><a href="https://mauicarrental.biz/info">General Info</a></li>
 	                    <li><a href="https://mauicarrental.biz/faq-s">Frequently Asked Questions</a></li>
 	                    <li><a href="https://mauicarrental.biz/reviews">Customer Reviews</a></li>
