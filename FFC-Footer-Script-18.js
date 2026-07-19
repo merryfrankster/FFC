@@ -38,7 +38,12 @@
                     "#frank-overlay-footer a { text-decoration: none !important; color: #5A413F !important; transition: color 0.15s ease-in-out !important; display: inline-block !important; text-align: left !important; } " +
                     "#frank-overlay-footer a:hover { color: #f79c5e !important; text-decoration: none !important; } " +
                     /* Tighten layout headings and paragraph structural boundaries */
-                    "#frank-overlay-footer h2, #frank-overlay-footer h3, #frank-overlay-footer h4 { margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
+                    /* Tighten layout headings and paragraph structural boundaries */
+                    "#frank-overlay-footer h2 { font-size: 14px !important; margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
+                    /* Tighten layout headings and paragraph structural boundaries */
+                    "#frank-overlay-footer h3 { font-size: 14px !important; margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
+                    /* Tighten layout headings and paragraph structural boundaries */
+                    "#frank-overlay-footer h4 { font-size: 14px !important; margin-top: 0 !important; margin-bottom: 4px !important; text-align: left !important; } " +
                     "#frank-overlay-footer p { text-align: left !important; margin-top: 0 !important; } " +
                     
                     /* MOBILE RESPONSIVE BREAKPOINT LAYER */
