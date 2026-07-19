@@ -60,7 +60,7 @@
                 <div class="MuiGrid-root MuiGrid-container">
                   <!-- COLUMN 1: BRAND COPY & CONCIERGE NAVIGATION -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1.3 1 200px !important; min-width: 200px !important; max-width: 260px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-			        <h4>Frank's Friendly Cars<br>Maui Car Rental LLC</h4>
+			        <h2>Frank's Friendly Cars<br>Maui Car Rental LLC</h2>
 		                <p><span data-nosnippet>Trusted local provider of <a href="https://mauicarrental.biz">Maui car rental</a> since 2006. 
 						Affordable, dependable, well-maintained cars. Personalized service with cars available for easy 
 						pick-up and return at Maui Kahului Airport
@@ -76,37 +76,37 @@
 
                   <!-- COLUMN 2: GEO-AUTHORITATIVE SERVICE LOCATIONS -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-                    <h4>Maui Car Rental Specials</h4>
+                    <h3>Maui Car Rental Specials</h3>
                     <ul>
-	                    <li><a href="https://mauicarrental.biz/services/specials/airport-special-150605423">Car Rental Maui Airport</a></li>
-	                    <li><a href="https://mauicarrental.biz/services/specials/cruise-ship-special-150490735">Car Rental Maui Cruise Port</a></li>
-	                    <li><a href="https://mauicarrental.biz/services/specials/rent-a-cheap-local-maui-rental-car-150491964">Affordable Local Car Rental</a></li>
+	                    <li><a href="https://mauicarrental.biz/services/specials/airport-special-150605423">Kahului Airport Pickup</a></li>
+	                    <li><a href="https://mauicarrental.biz/services/specials/cruise-ship-special-150490735">Maui Cruise Port Pickup</a></li>
+	                    <li><a href="https://mauicarrental.biz/services/specials/rent-a-cheap-local-maui-rental-car-150491964">Affordable Older Cars</a></li>
 	                    <li><a href="https://mauicarrental.biz/services/specials/discounts-on-new-maui-rental-cars-150491950">Deals On New Cars</a></li>
-	                    <li><a href="https://mauicarrental.biz/services/specials/long-term-rental-maui-cars-150490737">Long Term Maui Car Rental</a></li>
-	                    <li><a href="https://mauicarrental.biz/services/specials/rent-a-car-now-maui-only-150490734">Same Day Maui Car Rental</a></li>
-			            <li><a href="https://mauicarrental.biz/services/specials/maui-car-rental-under-25-cheap-150614793">Maui Car Rental Under 25</a></li>
-			            <li><a href="https://mauicarrental.biz/services/specials/maui-rental-car-deals-for-international-travelers-including-insurance-150538030">International Discount Car Rental With Insurance</a></li>
+	                    <li><a href="https://mauicarrental.biz/services/specials/long-term-rental-maui-cars-150490737">Long Term Rentals</a></li>
+	                    <li><a href="https://mauicarrental.biz/services/specials/rent-a-car-now-maui-only-150490734">Same Day Rentals</a></li>
+			            <li><a href="https://mauicarrental.biz/services/specials/maui-car-rental-under-25-cheap-150614793">Drivers Under 25</a></li>
+			            <li><a href="https://mauicarrental.biz/services/specials/maui-rental-car-deals-for-international-travelers-including-insurance-150538030">International Drivers & Insurance</a></li>
 			            <li><a href="https://mauicarrental.biz/services/specials/cheapest-car-rental-in-maui-just-25-out-the-door-150490736">$25/day Special</a></li>
                     </ul>
                   </div>
 
                   <!-- COLUMN 3: TRANSACTIONAL FLEET AND VALUE PHRASES -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-                    <h4>Maui Car Rental Info</h4>
+                    <h3>Maui Car Rental Info</h3>
                     <ul>
-	                    <li><a href="https://mauicarrental.biz/cars-rates">Cars & Rates</a></li>
+	                    <li><a href="https://mauicarrental.biz/cars-rates">Fllet & Rates</a></li>
 	                    <li><a href="https://mauicarrental.biz/info">General Info</a></li>
 	                    <li><a href="https://mauicarrental.biz/faq-s">Frequently Asked Questions</a></li>
-	                    <li><a href="https://mauicarrental.biz/reviews">Maui Car Rental Reviews</a></li>
-	                    <li><a href="https://mauicarrental.biz/info-on-renting-a-new-car">Renting A New Car In Maui</a></li>
-	                    <li><a href="https://mauicarrental.biz/blog">Maui Car Rental Blog</a></li>
-	                    <li><a href="https://mauicarrental.biz/podcast">Maui Car Rental Podcast</a></li>
+	                    <li><a href="https://mauicarrental.biz/reviews">Customer Reviews</a></li>
+	                    <li><a href="https://mauicarrental.biz/info-on-renting-a-new-car">Guide To New Car Fleet</a></li>
+	                    <li><a href="https://mauicarrental.biz/blog">Our Blog</a></li>
+	                    <li><a href="https://mauicarrental.biz/podcast">Our Podcast</a></li>
                     </ul>
                   </div>
 
                   <!-- COLUMN 4: NEW CAR DIRECTORY -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-                    <h4>New Cars</h4>
+                    <h3>New Cars</h3>
                     <ul>
 			          <li><a href="https://mauicarrental.biz/services/discounts-on-new-rental-cars-in-maui/rent-a-new-compact-car-in-maui-discounts-150490744">Compact/Economy</a></li>
 			          <li><a href="#">Mid-size</a></li>
@@ -125,7 +125,7 @@
              
                   <!-- COLUMN 5: AFFORDABLE OLDER CAR DIRECTORY -->
 				  <div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 170px !important; min-width: 170px !important; max-width: 230px !important; text-align: left !important; padding: 0 !important; margin: 0 !important; box-sizing: border-box !important;">
-                    <h4>Affordable <br>Older Cars</h4>
+                    <h3>Affordable <br>Older Cars</h3>
                     <ul>
 			          <li><a href="https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/economy-car-used-150428705">Economy</a></li>
 			          <li><a href="https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/mid-size-car-used-150428709">Mid-size</a></li>
