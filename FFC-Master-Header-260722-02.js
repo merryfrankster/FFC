@@ -50,7 +50,7 @@ document.documentElement.style.display = 'none';
 
     // 4. PRESERVED DYNAMIC SEO CONFIGURATION
     const seoConfig = {
-        "/": { "title": "Maui Car Rental: Kahului Airport & Cruise Port Deals", "description": "Maui car rental from $25/day. Pick up at Airport or walk from Cruise Port. Best price on new Jeeps, convertibles, SUVs, minivans, & affordable older cars." },
+        "/": { "title": "Maui Car Rental: Kahului Airport & Cruise Port Deals!", "description": "Maui car rental from $25/day. Pick up at Airport or walk from Cruise Port. Best price on new Jeeps, convertibles, SUVs, minivans, & affordable older cars." },
         "/info-on-renting-a-new-car": { "title": "Maui Car Rental - Companies, ratings, locations, vehicles, restrictions - Frank's Friendly Cars", "description": "Rent a new car with low miles. Discount prices from Maui's top car rental companies. No deposit, no pre-payment, no cancellation fee. Exclusive \"Lowest Price Guarantee.\"" },
         "/cars-rates": { "title": "Maui Car Rental: Prices, Special Deals, Online Booking", "description": "Maui car rental from $25/day. Book online or call 808-280-1196 for an instant quote today! Discounts on Jeeps, SUVs, convertibles, and minivans." },
        // "/maui-rental-cars": { "title": "Maui Rental Cars From Top Brands - Discount Deals", "description": "Book online or call 808-280-1196 for discounts on Jeeps, SUVs, convertibles, and minivans. No deposit, no pre-pay, free cancellation." },
