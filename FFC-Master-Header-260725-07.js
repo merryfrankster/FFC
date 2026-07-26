@@ -154,7 +154,7 @@ const injectServiceRatings = () => {
     const isMatchingPath = validPaths.some(path => currentPath.includes(path.toLowerCase()));
 
     if (isMatchingPath) {
-		if (!isMatchingPath) return;
+		// if (!isMatchingPath) return;
         if (document.getElementById('frank-service-rating')) return;
 
         // A. SCRAPE TITLE
