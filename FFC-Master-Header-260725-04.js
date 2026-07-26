@@ -139,130 +139,45 @@ document.documentElement.style.display = 'none';
         }		
 	};
 	
-// E. DYNAMIC ADVANCED BLOG POSTING SCHEMA INJECTOR
+// E. MINIMAL BASELINE BLOG POSTING SCHEMA INJECTOR
 const injectBlogPostingSchema = () => {
-    // Target blog content layouts exclusively
-    if (window.location.pathname.toLowerCase().includes('/blog/')) {
-        if (document.getElementById('frank-blog-schema')) return;
+    // Strict entry gate: Only execute on individual blog article pages
+    if (!window.location.pathname.toLowerCase().includes('/blog/')) return;
+    if (document.getElementById('frank-blog-schema')) return;
 
-        // A. SCRAPE CORE METADATA
-        const targetTitle = document.title || "Maui Car Rental News & Updates";
-        
-        const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
-        const targetDesc = descEl ? descEl.getAttribute('content') : "Stay updated with Maui car rental price tracking, forecasts, and travel news.";
+    // A. BARE MINIMUM METADATA SCRAPING (Identical to working Product script patterns)
+    const targetTitle = document.title || "Maui Car Rental Blog";
+    const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
+    const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC Blog Updates.";
 
-        // B. IMAGE HANDLING: DYNAMIC CLASS-BASED HYDRATION TARGETING
-        let targetImage = "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg"; // Safe master fallback
-        
-        // Target the img element inside your verified wrapping layout classes
-        const leadImg = document.querySelector('div._1SbczbIr img._2ITJo2E7');
-        if (leadImg) {
-            const dynamicSrc = leadImg.getAttribute('src');
-            // If the browser has finished hydration and populated the true URL string
-            if (dynamicSrc && dynamicSrc.trim() !== "" && dynamicSrc.trim() !== "/") {
-                targetImage = dynamicSrc.trim();
-            }
-        }		
-	
-        // C. SCRAPE LIVE CANONICAL LINK
-        const canonicalEl = document.querySelector('link[rel="canonical"]');
-        const canonicalUrl = canonicalEl ? canonicalEl.getAttribute('href') : window.location.href;
-
-        // D. SCRAPE LIVE MODIFIED TIMESTAMPS
-        const modifiedTimeEl = document.querySelector('meta[property="article:modified_time"]') || document.querySelector('meta[property="og:updated_time"]');
-        const targetModifiedDate = modifiedTimeEl ? modifiedTimeEl.getAttribute('content') : new Date().toISOString();
-        
-        // E. FUTURE-PROOFED PUBLISHED DATE EXTRACTION ENGINE
-        let targetPublishedDate = targetModifiedDate; 
-        
-        // Regex pattern: matches any 4-digit block starting with 202 (covers 2020 through 2029)
-        const decadeYearRegex = /\b202\d\b/; 
-        
-        const boldTags = document.querySelectorAll('p strong, b');
-        for (let tag of boldTags) {
-            const tagText = tag.innerText.trim();
-            
-            // Evaluates if the bold element contains a valid 202X year signature
-            if (decadeYearRegex.test(tagText)) { 
-                try {
-                    const cleanTextDate = tagText.replace('.', '').trim();
-                    const parsedIso = new Date(cleanTextDate).toISOString();
-                    
-                    // Simple validation safety guard: Verify the timestamp parsed cleanly
-                    if (!isNaN(Date.parse(parsedIso))) {
-                        targetPublishedDate = parsedIso;
-                        break; // Successfully extracted and assigned; break loop
-                    }
-                } catch(e) {
-                    // Fail-safe handles formatting edge cases cleanly
-                }
-            }
+    // B. TARGET BARE MINIMUM STRUCTURE (SKELETON BASELINE)
+    const minimalBlogObj = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": targetTitle,
+        "description": targetDesc,
+        "image": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg", // Known working static asset URL
+        "mainEntityOfPage": window.location.href,
+        "url": window.location.href,
+        "publisher": {
+            "@type": "Organization",
+            "name": "Frank's Friendly Cars Maui Car Rental LLC",
+            "logo": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Frank's Friendly Cars Maui Car Rental LLC"
         }
+    };
 
-        // F. KNOWLEDGE GRAPH ALIGNED ENGINE
-        const blogPostObj = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "@id": canonicalUrl + "#entry", 
-            "headline": targetTitle,
-            "description": targetDesc,
-            "image": targetImage,
-            "url": canonicalUrl,
-            "mainEntityOfPage": canonicalUrl,
-            "datePublished": targetPublishedDate, 
-            "dateModified": targetModifiedDate, 
-            
-            // ENTITY LINKING: References the parent collection stream
-            "isPartOf": {
-                "@type": "Blog",
-                "@id": "https://mauicarrental.biz/blog",
-                "name": "Maui Car Rental Blog"
-            },
-            
-            // ENTITY MERGING: Blends publisher authority straight to your core organization data profile
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://mauicarrental.biz",
-                "name": "Frank's Friendly Cars Maui Car Rental LLC",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg"				
-                }
-            },
-            
-            // E-E-A-T AUTHOR ENHANCEMENT: Establishes professional authority and corporate ownership
-            "author": {
-                "@type": "Person",
-                "name": "Frank Saab",
-                "jobTitle": "Owner & Editor",
-                "sameAs": [
-                    "https://linkedin.com/frank-saab" 
-                ],
-                "worksFor": {
-                    "@type": "Organization",
-                    "@id": "https://mauicarrental.biz"
-                }
-            },
-            
-            // LOCAL SEO GEOGRAPHIC ANCHORING: Bonds your informational content directly to your map/coordinates node
-            "contentLocation": {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "@id": "https://mauicarrental.biz#FFC-address"
-                }
-            }
-        };
-
-        // G. MOUNT ENGINE
-        const scriptNode = document.createElement('script');
-        scriptNode.id = 'frank-blog-schema';
-        scriptNode.type = 'application/ld+json';
-        scriptNode.text = JSON.stringify(blogPostObj);
-        document.head.appendChild(scriptNode);
-    }
+    // C. MOUNT ENGINE (Identical execution pathway)
+    const scriptNode = document.createElement('script');
+    scriptNode.id = 'frank-blog-schema';
+    scriptNode.type = 'application/ld+json';
+    scriptNode.text = JSON.stringify(minimalBlogObj);
+    document.head.appendChild(scriptNode);
 };
-	
+
     // Trigger execution and heartbeat loop globally
     forceSEO();
     // injectServiceRatings();
