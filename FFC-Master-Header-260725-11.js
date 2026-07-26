@@ -139,72 +139,39 @@ document.documentElement.style.display = 'none';
         }		
 	};
 	
-// MASTER UNIFIED SCHEMA INJECTOR (IF-ELSE ENCAPSULATION)
-const injectDynamicSchemas = () => {
+// D. DYNAMIC SERVICE RATING SCHEMA INJECTOR (WITH MULTI-PATH SUPPORT)
+const injectServiceRatings = () => {
     const currentPath = window.location.pathname.toLowerCase();
     
-    // -------------------------------------------------------------
-    // PATHWAY A: INDIVIDUAL BLOG ARTICLE PAGES
-    // -------------------------------------------------------------
-    if (currentPath.includes('/blog/')) {
-        if (document.getElementById('frank-blog-schema')) return;
+    // Add any additional path patterns to this array
+    const validPaths = [
+        '/services/specials/',
+        '/services/cheap-local-cars-for-rent-in-maui/',           
+        '/services/discounts-on-new-rental-cars-in-maui/'    
+    ];
 
-        const targetTitle = document.title || "Maui Car Rental Blog";
-        const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
-        const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC Blog Updates.";
+    // Check if the current URL matches any of the paths in our list
+    const isMatchingPath = validPaths.some(path => currentPath.includes(path.toLowerCase()));
 
-        const minimalBlogObj = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": targetTitle,
-            "description": targetDesc,
-            "image": "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg", 
-            "mainEntityOfPage": window.location.href,
-            "url": window.location.href,
-            "datePublished": "2026-07-19",
-            "dateModified": "2026-07-25",
-            "publisher": {
-                "@type": "Organization",
-                "name": "Frank's Friendly Cars Maui Car Rental LLC"
-            },
-            "author": {
-                "@type": "Organization",
-                "name": "Frank's Friendly Cars Maui Car Rental LLC"
-            }
-        };
-
-        const scriptNode = document.createElement('script');
-        scriptNode.id = 'frank-blog-schema';
-        scriptNode.type = 'application/ld+json';
-        scriptNode.text = JSON.stringify(minimalBlogObj);
-        document.head.appendChild(scriptNode);
-    } 
-    
-    // -------------------------------------------------------------
-    // PATHWAY B: VEHICLE SERVICES & REVENUE PAGES
-    // -------------------------------------------------------------
-    else {
-        const validPaths = [
-	        '/services/specials/',
-	        '/services/cheap-local-cars-for-rent-in-maui/',           
-	        '/services/discounts-on-new-rental-cars-in-maui/'      
-        ];
-
-        const isMatchingPath = validPaths.some(path => currentPath.includes(path));
-        if (!isMatchingPath) return; 
+    if (isMatchingPath) {
         if (document.getElementById('frank-service-rating')) return;
 
+        // A. SCRAPE TITLE
         const targetTitle = document.title || "Maui Car Rental Specials";
+
+        // B. SCRAPE META DESCRIPTION
         const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
         const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC is trusted by over 397 customers, earning a 4.4-star rating!";
 
+        // C. TARGET DESIGN ENGINE
         const cleanRatingObj = {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": targetTitle,
-            "image": "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg",
+	        "image": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg",
             "url": window.location.href,
             "sku": "14ad92114460gba9",
+            /* UPDATED: Injects your page's live, unique meta description */
             "description": targetDesc,
             "manufacturer": {
                 "@type": "Organization",
@@ -220,7 +187,7 @@ const injectDynamicSchemas = () => {
                 },
                 "address": {
                     "@type": "PostalAddress",
-                    "@id": "https://mauicarrental.biz#FFC-address", 
+                    "@id": "https://mauicarrental.biz#FFC-address",
                     "streetAddress": "400 Hana Hwy Shed C",
                     "addressLocality": "Kahului",
                     "addressRegion": "HI",
@@ -237,6 +204,7 @@ const injectDynamicSchemas = () => {
             }
         };
 
+        // 4. MOUNT ENGINE: Appends the completed dataset directly to the bottom floor of the document head
         const scriptNode = document.createElement('script');
         scriptNode.id = 'frank-service-rating';
         scriptNode.type = 'application/ld+json';
@@ -245,19 +213,17 @@ const injectDynamicSchemas = () => {
     }
 };
 
-// MASTER HEARTBEAT EXECUTION TIMERS
-forceSEO();
-injectDynamicSchemas();
-
-let masterCount = 0;
-const masterHeartbeat = setInterval(() => {
+    // Trigger execution and heartbeat loop globally
     forceSEO();
-    injectDynamicSchemas();
-    masterCount++;
-    if (masterCount > 30) {
-        clearInterval(masterHeartbeat);
-    }
-}, 500);
+    injectServiceRatings();
+    
+    let count = 0;
+    const heartbeat = setInterval(() => {
+        forceSEO();
+        injectServiceRatings();
+        count++;
+        if (count > 30) clearInterval(heartbeat);
+    }, 500);	
 	
     // 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
