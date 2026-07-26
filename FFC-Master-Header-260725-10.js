@@ -258,6 +258,7 @@ const masterHeartbeat = setInterval(() => {
         clearInterval(masterHeartbeat);
     }
 }, 500);
+	
     // 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
         if (window.location.href.startsWith('https://mauicarrental.biz/about-us')) {
