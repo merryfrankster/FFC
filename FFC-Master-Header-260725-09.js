@@ -139,95 +139,127 @@ document.documentElement.style.display = 'none';
         }		
 	};
 	
-	// D. DYNAMIC SERVICE RATING SCHEMA INJECTOR (WITH MULTI-PATH SUPPORT)
-	const injectServiceRatings = () => {
-	    const currentPath = window.location.pathname.toLowerCase();
-	    
-	    // Add any additional path patterns to this array
-	    const validPaths = [
+// MASTER UNIFIED SCHEMA INJECTOR (IF-ELSE ENCAPSULATION)
+const injectDynamicSchemas = () => {
+    const currentPath = window.location.pathname.toLowerCase();
+    
+    // -------------------------------------------------------------
+    // PATHWAY A: INDIVIDUAL BLOG ARTICLE PAGES
+    // -------------------------------------------------------------
+    if (currentPath.includes('/blog/')) {
+        if (document.getElementById('frank-blog-schema')) return;
+
+        const targetTitle = document.title || "Maui Car Rental Blog";
+        const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
+        const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC Blog Updates.";
+
+        const minimalBlogObj = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": targetTitle,
+            "description": targetDesc,
+            "image": "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg", 
+            "mainEntityOfPage": window.location.href,
+            "url": window.location.href,
+            "datePublished": "2026-07-19",
+            "dateModified": "2026-07-25",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Frank's Friendly Cars Maui Car Rental LLC",
+                "logo": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg"
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "Frank's Friendly Cars Maui Car Rental LLC"
+            }
+        };
+
+        const scriptNode = document.createElement('script');
+        scriptNode.id = 'frank-blog-schema';
+        scriptNode.type = 'application/ld+json';
+        scriptNode.text = JSON.stringify(minimalBlogObj);
+        document.head.appendChild(scriptNode);
+    } 
+    
+    // -------------------------------------------------------------
+    // PATHWAY B: VEHICLE SERVICES & REVENUE PAGES
+    // -------------------------------------------------------------
+    else {
+        const validPaths = [
 	        '/services/specials/',
 	        '/services/cheap-local-cars-for-rent-in-maui/',           
-	        '/services/discounts-on-new-rental-cars-in-maui/'    
-	    ];
-	
-	    // Check if the current URL matches any of the paths in our list
-	    const isMatchingPath = validPaths.some(path => currentPath.includes(path.toLowerCase()));
-	
-	    if (isMatchingPath) {
-	        if (document.getElementById('frank-service-rating')) return;
-	
-	        // A. SCRAPE TITLE
-	        const targetTitle = document.title || "Maui Car Rental Specials";
-	
-	        // B. SCRAPE META DESCRIPTION
-	        const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
-	        const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC is trusted by over 397 customers, earning a 4.4-star rating!";
-	
-	        // C. TARGET DESIGN ENGINE
-	        const cleanRatingObj = {
-	            "@context": "https://schema.org",
-	            "@type": "Product",
-	            "name": targetTitle,
-		        "image": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg",
-	            "url": window.location.href,
-	            "sku": "14ad92114460gba9",
-	            /* UPDATED: Injects your page's live, unique meta description */
-	            "description": targetDesc,
-	            "manufacturer": {
-	                "@context": "https://schema.org",
-	                "@type": "Organization",
-	                "@id": "https://www.trustindex.io/reviews/mauicarrental.biz/en",
-	                "name": "Frank's Friendly Cars Maui Car Rental LLC",
-	        		"logo": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg",
-	                "url": "https://mauicarrental.biz",
-	                "description": "Frank's Friendly Cars Maui Car Rental LLC is trusted by over 397 customers, earning a 4.4-star rating! Explore real reviews and share your own experience.",
-	                "brand": {
-	                    "@type": "Brand",
-	                    "@id": "https://mauicarrental.biz",
-	                    "name": "Frank's Friendly Cars Maui Car Rental LLC"
-	                },
-	                "address": {
-	                    "@type": "PostalAddress",
-	                    "@id": "https://mauicarrental.biz#FFC-address",
-	                    "streetAddress": "400 Hana Hwy Shed C",
-	                    "addressLocality": "Kahului",
-	                    "addressRegion": "HI",
-	                    "postalCode": "96732",
-	                    "addressCountry": "US"
-	                }
-	            },
-	            "aggregateRating": {
-	                "@type": "AggregateRating",
-	                "worstRating": 1,
-	                "bestRating": 5,
-	                "ratingValue": 4.4,
-	                "ratingCount": 397
-	            }
-	        };
-	
-	        // 4. MOUNT ENGINE: Appends the completed dataset directly to the bottom floor of the document head
-	        const scriptNode = document.createElement('script');
-	        scriptNode.id = 'frank-service-rating';
-	        scriptNode.type = 'application/ld+json';
-	        scriptNode.text = JSON.stringify(cleanRatingObj);
-	        document.head.appendChild(scriptNode);
-	    }
-	};
-	
-    // Trigger execution and heartbeat loop globally
-    forceSEO();
-    injectServiceRatings();
-	// injectBlogPostingSchema();
-    
-    let count = 0;
-    const heartbeat = setInterval(() => {
-        forceSEO();
-        injectServiceRatings();
-		//injectBlogPostingSchema();
-        count++;
-        if (count > 30) clearInterval(heartbeat);
-    }, 500);
+	        '/services/discounts-on-new-rental-cars-in-maui/'      
+        ];
 
+        const isMatchingPath = validPaths.some(path => currentPath.includes(path));
+        if (!isMatchingPath) return; 
+        if (document.getElementById('frank-service-rating')) return;
+
+        const targetTitle = document.title || "Maui Car Rental Specials";
+        const descEl = document.querySelector('meta[name="description"]') || document.querySelector('meta[property="og:description"]');
+        const targetDesc = descEl ? descEl.getAttribute('content') : "Frank's Friendly Cars Maui Car Rental LLC is trusted by over 397 customers, earning a 4.4-star rating!";
+
+        const cleanRatingObj = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": targetTitle,
+            "image": "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg",
+            "url": window.location.href,
+            "sku": "14ad92114460gba9",
+            "description": targetDesc,
+            "manufacturer": {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://www.trustindex.io/reviews/mauicarrental.biz/en",
+                "name": "Frank's Friendly Cars Maui Car Rental LLC",
+        		"logo": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg",
+                "url": "https://mauicarrental.biz",
+                "description": "Frank's Friendly Cars Maui Car Rental LLC is trusted by over 397 customers, earning a 4.4-star rating! Explore real reviews and share your own experience.",
+                "brand": {
+                    "@type": "Brand",
+                    "@id": "https://mauicarrental.biz",
+                    "name": "Frank's Friendly Cars Maui Car Rental LLC"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "@id": "https://mauicarrental.biz#FFC-address", 
+                    "streetAddress": "400 Hana Hwy Shed C",
+                    "addressLocality": "Kahului",
+                    "addressRegion": "HI",
+                    "postalCode": "96732",
+                    "addressCountry": "US"
+                }
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "worstRating": 1,
+                "bestRating": 5,
+                "ratingValue": 4.4,
+                "ratingCount": 397
+            }
+        };
+
+        const scriptNode = document.createElement('script');
+        scriptNode.id = 'frank-service-rating';
+        scriptNode.type = 'application/ld+json';
+        scriptNode.text = JSON.stringify(cleanRatingObj);
+        document.head.appendChild(scriptNode);
+    }
+};
+
+// MASTER HEARTBEAT EXECUTION TIMERS
+forceSEO();
+injectDynamicSchemas();
+
+let masterCount = 0;
+const masterHeartbeat = setInterval(() => {
+    forceSEO();
+    injectDynamicSchemas();
+    masterCount++;
+    if (masterCount > 30) {
+        clearInterval(masterHeartbeat);
+    }
+}, 500);
     // 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
         if (window.location.href.startsWith('https://mauicarrental.biz/about-us')) {
