@@ -165,8 +165,7 @@ const injectDynamicSchemas = () => {
             "dateModified": "2026-07-25",
             "publisher": {
                 "@type": "Organization",
-                "name": "Frank's Friendly Cars Maui Car Rental LLC",
-                "logo": "https://cdn.trustindex.io/companies/14/14ad92114460gba9/avatar.jpg"
+                "name": "Frank's Friendly Cars Maui Car Rental LLC"
             },
             "author": {
                 "@type": "Organization",
@@ -208,7 +207,6 @@ const injectDynamicSchemas = () => {
             "sku": "14ad92114460gba9",
             "description": targetDesc,
             "manufacturer": {
-                "@context": "https://schema.org",
                 "@type": "Organization",
                 "@id": "https://www.trustindex.io/reviews/mauicarrental.biz/en",
                 "name": "Frank's Friendly Cars Maui Car Rental LLC",
