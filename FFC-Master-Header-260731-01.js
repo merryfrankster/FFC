@@ -27,6 +27,9 @@ document.documentElement.style.display = 'none';
         "/refund-policy": "https://mauicarrental.biz/faq-s",
         "/privacy-policy": "https://mauicarrental.biz/faq-s",
         "/terms-and-conditions": "https://mauicarrental.biz/faq-s",
+		"/booking": "https://mauicarrental.biz/cars-rates",
+		"/services/used-local-cars-for-rent-in-maui/full-size-suv-used-150428711": "https://mauicarrental.biz/services/cheap-local-cars-for-rent-in-maui/full-size-suv-used-150428711",
+		"/services/specials/long-term-rental-150490737": "https://mauicarrental.biz/services/specials/long-term-rental-maui-cars-150490737",
         //"/services/specials/young-driver-special-age-20-to-24-8-day-150609174": "https://mauicarrental.biz/services/specials/maui-car-rental-under-25-cheap-150614793",
         "/price-list/call-808-280-1196-for-more-info": "https://mauicarrental.biz/faq-s"
     };
@@ -49,7 +52,7 @@ document.documentElement.style.display = 'none';
     };	
 
     // 4. PRESERVED DYNAMIC SEO CONFIGURATION
-    const seoConfig = {
+	const seoConfig = {
         "/": { "title": "Maui Car Rental: Kahului Airport & Cruise Port Deals!", "description": "Maui car rental from $25/day. Pick up at Airport or walk from Cruise Port. Best price on new Jeeps, convertibles, SUVs, minivans, & affordable older cars." },
         "/info-on-renting-a-new-car": { "title": "Maui Car Rental - Companies, ratings, locations, vehicles, restrictions - Frank's Friendly Cars", "description": "Rent a new car with low miles. Special deals from Maui's top car rental companies. No deposit, no pre-payment, no cancellation fee. Lowest Price Guarantee." },
         "/cars-rates": { "title": "Maui Car Rental: Prices, Special Deals, Online Booking", "description": "Maui car rental from $25/day. Book online or call 808-280-1196! Get prices on new Jeeps, SUVs, convertibles, minivans, and affordable older cars." },
@@ -69,7 +72,7 @@ document.documentElement.style.display = 'none';
         "/products": { "title": "Maui Car Rental Products From Frank's Friendly Cars", "description": "Maui car rental at its very finest. Indulge in luxury on a next-to-nothing price. Champagne taste and beer budget? You've come to the right place." },
         "/faq-s": { "title": "Maui Car Rental FAQ's For Frank's Friendly Cars", "description": "Maui car rental questions & answers. Pickup and return? Airport? Cruise Port? Prices? Payments? Booking fees? Requirements?  Restrictions? And much more..." }
     };
-
+	
     const globalImage = "https://img.uenicdn.com/cdn-cgi/image/width=1280,fit=scale-down,f=auto/image/upload/v1777929271/business/22462d09-da05-411d-a3cc-73074cfcd777.jpg";
     const globalImageHeight = "1200";
     const globalImageWidth = "1200";
@@ -214,17 +217,20 @@ const injectServiceRatings = () => {
 };
 
     // Trigger execution and heartbeat loop globally
-    forceSEO();
+    // commented out 7-31-26
+	// forceSEO();
     injectServiceRatings();
     
     let count = 0;
     const heartbeat = setInterval(() => {
-        forceSEO();
+        // commented out 7-31-26
+		// forceSEO();
         injectServiceRatings();
         count++;
         if (count > 30) clearInterval(heartbeat);
     }, 500);	
-	
+
+	/** Not working so removed to conserve resources
     // 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
         if (window.location.href.startsWith('https://mauicarrental.biz/about-us')) {
@@ -244,7 +250,8 @@ const injectServiceRatings = () => {
         document.addEventListener('DOMContentLoaded', executeDomLogic);
     } else {
         executeDomLogic();
-    }
+    } 
+	end removed section **/
 
     // HARD SAFETY TIMEOUT
     setTimeout(revealPage, 1500);
