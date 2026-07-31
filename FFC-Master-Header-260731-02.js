@@ -230,8 +230,7 @@ const injectServiceRatings = () => {
         if (count > 30) clearInterval(heartbeat);
     }, 500);	
 
-	/** Not working so removed to conserve resources
-    // 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
+	// 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
         if (window.location.href.startsWith('https://mauicarrental.biz/about-us')) {
             var targetHeader = document.querySelector('h2._2iYzkDwt');
@@ -251,8 +250,7 @@ const injectServiceRatings = () => {
     } else {
         executeDomLogic();
     } 
-	end removed section **/
-
+	
     // HARD SAFETY TIMEOUT
     setTimeout(revealPage, 1500);
 })();
