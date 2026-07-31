@@ -232,6 +232,7 @@ const injectServiceRatings = () => {
 
 	// 7. EXECUTE DOM MODIFICATIONS (ABOUT US HEADING SWAP)
     function executeDomLogic() {
+		/** comment out header substitution
         if (window.location.href.startsWith('https://mauicarrental.biz/about-us')) {
             var targetHeader = document.querySelector('h2._2iYzkDwt');
             if (targetHeader) {
@@ -240,7 +241,7 @@ const injectServiceRatings = () => {
                     spanElement.textContent = 'Maui Car Rental Podcast';
                 }
             }
-        }
+        } **/
         revealPage();
     }
 
@@ -250,7 +251,7 @@ const injectServiceRatings = () => {
     } else {
         executeDomLogic();
     } 
-	
+
     // HARD SAFETY TIMEOUT
     setTimeout(revealPage, 1500);
 })();
