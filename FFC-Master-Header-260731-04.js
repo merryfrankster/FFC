@@ -219,13 +219,13 @@ const injectServiceRatings = () => {
     // Trigger execution and heartbeat loop globally
     // commented out 7-31-26
 	// forceSEO();
-    injectServiceRatings();
+    // injectServiceRatings();
     
     let count = 0;
     const heartbeat = setInterval(() => {
         // commented out 7-31-26
 		// forceSEO();
-        injectServiceRatings();
+        // injectServiceRatings();
         count++;
         if (count > 30) clearInterval(heartbeat);
     }, 500);	
