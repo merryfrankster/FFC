@@ -1,13 +1,14 @@
-// 1. FORCE THE PAGE TO STAY COMPLETELY HIDDEN IMMEDIATELY TO PREVENT FLICKER
-document.documentElement.style.display = 'none';
-
+/**
+ * Maui Car Rental - Unified Master Control Script (V7 - Smart Path Filter)
+ * Served via jsDelivr CDN
+ */
 (function() {
     'use strict';
 
-    // 2. PATH ANALYSIS FOR REDIRECT MATCHING
+    // 1. PATH ANALYSIS FOR REDIRECT MATCHING
     var path = window.location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
 
-    // 3. VERIFIED REDIRECT CONFIGURATION Matrix
+    // 2. VERIFIED REDIRECT CONFIGURATION MATRIX
     var redirects = {
         "/contact": "https://mauicarrental.biz/contact-us",
         "/map": "https://mauicarrental.biz/contact-us",
@@ -28,26 +29,27 @@ document.documentElement.style.display = 'none';
         "/price-list/call-808-280-1196-for-more-info": "https://mauicarrental.biz/faq-s"
     };
  
-    // EXECUTE REDIRECT IMMEDIATELY (Stops execution here if matching a redirected path)
+    // 3. IF A REDIRECT MATCHES, INJECT BLANKOUT STYLE AND TRIGGER REDIRECT IMMEDIATELY
     if (redirects[path]) {
+        // Create an absolute visual blankout style
+        var css = 'html { display: none !important; opacity: 0 !important; background: #ffffff !important; }';
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        
+        // Force inject it into the top element instantly to kill the 404 page render pass
+        (document.head || document.documentElement).appendChild(style);
+
+        // Perform the instant client-side forward
         window.location.replace(redirects[path]);
         return; 
     }
 
-    // 4. REVEAL CONTROLLER
-    function revealPage() {
-        if (document.documentElement.style.display === 'none') {
-            document.documentElement.style.display = '';
-        }
-    }
-
-	// 5. EXECUTE VISIBILITY LIFECYCLE
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', revealPage);
-    } else {
-        revealPage();
-    } 
-
-    // HARD SAFETY TIMEOUT (Runs entirely in the background; does not block page loading assets)
-    setTimeout(revealPage, 1500);
+    // 4. FOR VALID PATHS: NO STYLES ARE HIDDEN, SO NO REVEAL LIFECYCLE IS NEEDED
+    // The script cleanly exits here, meaning regular pages load with zero interference!
 })();
