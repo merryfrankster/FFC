@@ -368,11 +368,16 @@
    ========================================================================== */
 /* ADD TO MASTER STYLE SHEET */
 /* Fix Desktop CLS without breaking Mobile: Apply dimensions only on wide screens */
+/* ==========================================================
+   CLS CORRECTION FOR DESKTOP SCREENS - NO DISTORTION
+   ========================================================== */
 @media screen and (min-width: 992px) {
     #header-logo, img[data-testid="venue-logo-image"] {
-        width: 290px !important;
-        height: 290px !important;
-        aspect-ratio: 1 / 1 !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        height: auto !important;
+        aspect-ratio: 184 / 173 !important; /* Perfect bounding box ratio protection */
+        object-fit: contain !important; /* Prevents visual squishing/stretching entirely */
         display: inline-block !important;
     }
 }
