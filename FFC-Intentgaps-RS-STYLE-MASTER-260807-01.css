@@ -368,12 +368,3 @@
    ========================================================================== */
 /* ADD TO MASTER STYLE SHEET */
 /* Fix Desktop CLS without breaking Mobile: Apply dimensions only on wide screens */
-@media screen and (min-width: 992px) {
-    #header-logo, 
-    img[data-testid="venue-logo-image"] {
-        width: 290px !important;
-        height: 290px !important; /* Forces the explicit height to prevent layout collapse */
-        aspect-ratio: 1 / 1 !important;
-        display: inline-block !important;
-    }
-}
