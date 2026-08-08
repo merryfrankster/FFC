@@ -372,12 +372,19 @@ div#hero-img::after {
 }
 
 /* ==========================================================
-   2. MOBILE CLS INSULATION: BALANCED ASPECT VIEWPORT FILL
+   2. ELIMINATE FLASH OF UNSTYLED CONTENT (FOUC)
+   ========================================================== */
+div._1SZF9PNO {
+    background-color: transparent !important; /* Kills the red background before image paint */
+}
+
+/* ==========================================================
+   3. MOBILE CLS INSULATION: BALANCED ASPECT VIEWPORT FILL
    ========================================================== */
 @media screen and (max-width: 991px) {
     div#hero-img {
         width: 100% !important;
-        height: 100% !important; /* Forced 100% vertical scaling to eliminate red background bleed */
+        height: 100% !important; /* Forced vertical scaling to fill container space */
         min-height: 250px !important; /* Holds shape under Google's throttled benchmarks */
         aspect-ratio: 16 / 9 !important; /* Preserves a standard mobile responsive canvas */
     }
