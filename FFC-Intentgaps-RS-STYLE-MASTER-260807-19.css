@@ -379,13 +379,16 @@ div._1SZF9PNO {
 }
 
 /* ==========================================================
-   3. UNIFIED MOBILE FIREWALL (ALL SCREENS UNDER 991px)
+   3. HIGH-SPECIFICITY FIREWALL (ALL NON-DESKTOP UNDER 991px)
    ========================================================== */
 @media screen and (max-width: 991px) {
-    div#hero-img {
+    /* Combining the ID and structural class overrides UENI's backend tablet block */
+    div#hero-img,
+    div#hero-img._3KHit-0K,
+    div._1SZF9PNO div#hero-img {
         width: 100% !important;
         height: 100% !important;
-        min-height: 250px !important; /* Holds shape under Google's throttled smartphone rules */
-        aspect-ratio: 16 / 9 !important; /* Bypasses broken tablet rules with a stable working ratio */
+        min-height: 250px !important; /* Holds shape under Google's throttled rules */
+        aspect-ratio: 16 / 9 !important; /* Forces standard working ratio, neutralizing the gray void */
     }
 }
