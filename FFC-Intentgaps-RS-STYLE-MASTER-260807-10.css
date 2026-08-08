@@ -364,12 +364,11 @@
   }
 }
 /* ==========================================================
-   1. NEUTRALIZE HERO IMAGE DIMMING TINT (DESKTOP & MOBILE)
+   1. NEUTRALIZE HERO DIMMING MASK Safely (DESKTOP & MOBILE)
    ========================================================== */
 div#hero-img::after {
-    background-color: transparent !important;
-    display: none !important;
-    content: none !important;
+    background-color: transparent !important; /* Clears the 30% tint completely */
+    opacity: 0 !important; /* Insulates visibility layer bounds */
 }
 
 /* ==========================================================
@@ -379,7 +378,7 @@ div#hero-img::after {
     div#hero-img {
         width: 100% !important;
         height: auto !important;
-        min-height: 250px !important; /* Holds a stable vertical block structure on phones */
-        aspect-ratio: 16 / 9 !important; /* Matches standard mobile responsive aspect tracks */
+        min-height: 250px !important; /* Holds shape under Google's throttled rules */
+        aspect-ratio: 16 / 9 !important; /* Proportional mobile widescreen block */
     }
 }
