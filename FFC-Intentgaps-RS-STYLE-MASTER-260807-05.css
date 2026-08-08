@@ -369,7 +369,8 @@
 /* ADD TO MASTER STYLE SHEET */
 /* Fix Desktop CLS without breaking Mobile: Apply dimensions only on wide screens */
 @media screen and (min-width: 992px) {
-    img._1zJY2JKI._3dC4AhqV {
+    img._1zJY2JKI._3dC4AhqV,
+    img#header-logo {
         width: 100% !important;
         max-width: 162px !important;
         height: auto !important;
@@ -377,4 +378,4 @@
         object-fit: contain !important;
         display: inline-block !important;
     }
-}
+} 
