@@ -391,12 +391,12 @@ div._1SZF9PNO {
 }
 
 /* ==========================================================
-   4. TABLET VIEWPORT COUPLING (SCALES 576px TO 991px)
+   4. TABLET VIEWPORT COUPLING (MATCHES UENI TRACK 576px TO 768px)
    ========================================================== */
-@media screen and (min-width: 576px) and (max-width: 991px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
     div#hero-img {
         width: 100% !important;
-        height: 100% !important; /* Verification fix: expands full vertical space */
+        height: 100% !important; 
         min-height: 550px !important; /* Explicitly matches UENI's native box computation */
         aspect-ratio: unset !important; /* Unbinds aspect limits to prevent layout collapse */
     }
