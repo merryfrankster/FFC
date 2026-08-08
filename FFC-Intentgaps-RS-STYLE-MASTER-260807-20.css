@@ -379,16 +379,32 @@ div._1SZF9PNO {
 }
 
 /* ==========================================================
-   3. HIGH-SPECIFICITY FIREWALL (ALL NON-DESKTOP UNDER 991px)
+   3. MOBILE SCREEN CLS INSULATION (PHONES UNDER 575px)
    ========================================================== */
-@media screen and (max-width: 991px) {
-    /* Combining the ID and structural class overrides UENI's backend tablet block */
+@media screen and (max-width: 575px) {
     div#hero-img,
     div#hero-img._3KHit-0K,
     div._1SZF9PNO div#hero-img {
         width: 100% !important;
         height: 100% !important;
         min-height: 250px !important; /* Holds shape under Google's throttled rules */
-        aspect-ratio: 16 / 9 !important; /* Forces standard working ratio, neutralizing the gray void */
+        aspect-ratio: 16 / 9 !important; /* Proportional widescreen canvas on phones */
+    }
+}
+
+/* ==========================================================
+   4. HIGH-SPECIFICITY TABLET ASSET OVERRIDE (576px TO 768px)
+   ========================================================== */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    div#hero-img,
+    div#hero-img._3KHit-0K,
+    div._1SZF9PNO div#hero-img {
+        /* HIJACK COUPLING: Explicitly inject the working baseline image path */
+        background-image: url("https://speedy.uenicdn.com/ea25cf4e-1794-4012-ad09-68abf87e74c6/c575_420a/image/upload/v1778723216/business/ba5471c5-fff4-463d-826b-7f0c29e62b0e.jpg") !important;
+        
+        width: 100% !important;
+        height: 100% !important; 
+        min-height: 550px !important; /* Matches UENI's native vertical block computation */
+        aspect-ratio: unset !important; /* Unbinds aspect limits to prevent layout collapse */
     }
 }
