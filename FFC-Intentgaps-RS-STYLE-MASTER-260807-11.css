@@ -364,21 +364,21 @@
   }
 }
 /* ==========================================================
-   1. NEUTRALIZE HERO DIMMING MASK Safely (DESKTOP & MOBILE)
+   1. NEUTRALIZE HERO DIMMING MASK SAFELY (DESKTOP & MOBILE)
    ========================================================== */
 div#hero-img::after {
-    background-color: transparent !important; /* Clears the 30% tint completely */
-    opacity: 0 !important; /* Insulates visibility layer bounds */
+    background-color: transparent !important; /* Clears the dark 30% tint */
+    opacity: 0 !important; /* Insulates the layer visibility bounds */
 }
 
 /* ==========================================================
-   2. MOBILE CLS INSULATION: RESERVING HERO VERTICAL VIEWPORT
+   2. MOBILE CLS INSULATION: BALANCED ASPECT VIEWPORT FILL
    ========================================================== */
 @media screen and (max-width: 991px) {
     div#hero-img {
         width: 100% !important;
-        height: auto !important;
-        min-height: 250px !important; /* Holds shape under Google's throttled rules */
-        aspect-ratio: 16 / 9 !important; /* Proportional mobile widescreen block */
+        height: 100% !important; /* Forced 100% vertical scaling to eliminate red background bleed */
+        min-height: 250px !important; /* Holds shape under Google's throttled benchmarks */
+        aspect-ratio: 16 / 9 !important; /* Preserves a standard mobile responsive canvas */
     }
 }
