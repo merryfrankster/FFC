@@ -375,17 +375,29 @@ div#hero-img::after {
    2. ELIMINATE FLASH OF UNSTYLED CONTENT (FOUC)
    ========================================================== */
 div._1SZF9PNO {
-    background-color: transparent !important; /* Kills the red background before image paint */
+    background-color: transparent !important; /* Kills the crimson flash before image paint */
 }
 
 /* ==========================================================
-   3. MOBILE CLS INSULATION: BALANCED ASPECT VIEWPORT FILL
+   3. MOBILE SCREEN CLS INSULATION (PHONES UNDER 575px)
    ========================================================== */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 575px) {
     div#hero-img {
         width: 100% !important;
-        height: 100% !important; /* Forced vertical scaling to fill container space */
-        min-height: 250px !important; /* Holds shape under Google's throttled benchmarks */
-        aspect-ratio: 16 / 9 !important; /* Preserves a standard mobile responsive canvas */
+        height: 100% !important;
+        min-height: 250px !important; /* Holds shape under Google's throttled smartphone rules */
+        aspect-ratio: 16 / 9 !important; /* Proportional widescreen canvas on phones */
+    }
+}
+
+/* ==========================================================
+   4. TABLET VIEWPORT COUPLING (SCALES 576px TO 991px)
+   ========================================================== */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    div#hero-img {
+        width: 100% !important;
+        height: 100% !important; /* Verification fix: expands full vertical space */
+        min-height: 550px !important; /* Explicitly matches UENI's native box computation */
+        aspect-ratio: unset !important; /* Unbinds aspect limits to prevent layout collapse */
     }
 }
