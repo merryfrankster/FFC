@@ -379,13 +379,25 @@ div._1SZF9PNO {
 }
 
 /* ==========================================================
-   3. UNIFIED MOBILE FIREWALL (PHONES & TABLETS UNDER 991px)
+   3. MOBILE SCREEN CLS INSULATION (PHONES UNDER 575px)
    ========================================================== */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 575px) {
     div#hero-img {
         width: 100% !important;
         height: 100% !important;
-        min-height: 250px !important; /* Holds shape under Google's throttled smartphone rules */
-        aspect-ratio: 16 / 9 !important; /* Bypasses broken tablet rules with a stable working ratio */
+        min-height: 250px !important; /* Holds shape under Google's throttled rules */
+        aspect-ratio: 16 / 9 !important; /* Proportional widescreen canvas on phones */
+    }
+}
+
+/* ==========================================================
+   4. TABLET VIEWPORT COUPLING (INCLUSIVE OF THE 768px GAP)
+   ========================================================== */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    div#hero-img {
+        width: 100% !important;
+        height: 100% !important; 
+        min-height: 550px !important; /* Matches UENI's native vertical block computation */
+        aspect-ratio: unset !important; /* Unbinds aspect limits to prevent layout collapse */
     }
 }
