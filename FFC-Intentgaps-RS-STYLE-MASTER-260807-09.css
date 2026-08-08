@@ -363,3 +363,23 @@
     width: calc(100% + 6px) !important; /* Realignment pass for the black divider line */
   }
 }
+/* ==========================================================
+   1. NEUTRALIZE HERO IMAGE DIMMING TINT (DESKTOP & MOBILE)
+   ========================================================== */
+div#hero-img::after {
+    background-color: transparent !important;
+    display: none !important;
+    content: none !important;
+}
+
+/* ==========================================================
+   2. MOBILE CLS INSULATION: RESERVING HERO VERTICAL VIEWPORT
+   ========================================================== */
+@media screen and (max-width: 991px) {
+    div#hero-img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important; /* Holds a stable vertical block structure on phones */
+        aspect-ratio: 16 / 9 !important; /* Matches standard mobile responsive aspect tracks */
+    }
+}
