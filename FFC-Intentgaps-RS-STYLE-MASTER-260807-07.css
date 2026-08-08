@@ -363,19 +363,18 @@
     width: calc(100% + 6px) !important; /* Realignment pass for the black divider line */
   }
 }
-/* ==========================================================================
-   CLS CORRECTION FOR DESKTOP SCREENS
-   ========================================================================== */
-/* ADD TO MASTER STYLE SHEET */
-/* Fix Desktop CLS without breaking Mobile: Apply dimensions only on wide screens */
-/* @media screen and (min-width: 992px) {
-    img._1zJY2JKI._3dC4AhqV,
-    img#header-logo {
-        width: 100% !important;
-        max-width: 162px !important;
-        height: auto !important;
-        aspect-ratio: 61 / 60 !important;
-        object-fit: contain !important;
-        display: inline-block !important;
+/* ==========================================================
+   CRUSH DESKTOP CLS: ELIMINATE THE ANIMATED LOGO ENTIRELY 
+   ========================================================== */
+@media screen and (min-width: 992px) {
+    img#header-logo, 
+    img[data-testid="venue-logo-image"],
+    ._1zJY2JKI, 
+    ._3dC4AhqV {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
     }
-} */
+}
