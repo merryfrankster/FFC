@@ -510,7 +510,7 @@ div#hero-img {
         background-image: url("https://img77.uenicdn.com/image/upload/v1787033555/business/7a3ba7a4-0209-4f04-9f49-8ac5acfcde1a.jpg") !important;
         height: auto !important; 
         min-height: 250px !important; 
-        aspect-ratio: 16 [slash] 9 !important; 
+        aspect-ratio: 16 / 9 !important; 
     }
 }
 
