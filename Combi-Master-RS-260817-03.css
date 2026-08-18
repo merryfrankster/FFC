@@ -503,14 +503,14 @@ div#hero-img {
 
 /* 2. RESPONSIVE VIEWPORT TIERS & ASSET TIERS */
 
-/* ?? MOBILE TIER (0px to 575px)
-   Prioritizes loading speeds for your core mobile user base */
+/* 📱 MOBILE TIER (0px to 575px) - Updated Height Bypass Rules */
 @media screen and (max-width: 575px) {
     div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
-        background-image: url("https://img77.uenicdn.com/image/upload/v1787033555/business/7a3ba7a4-0209-4f04-9f49-8ac5acfcde1a.jpg") !important;
-        height: auto !important; 
-        min-height: 250px !important; 
-        aspect-ratio: 16 / 9 !important; 
+        background-image: url("https://uenicdn.com") !important;
+        width: 100% !important;
+        height: 100% !important;       /* Forces the element to fill the layout block */
+        min-height: 324px !important;   /* Matches your optimized mobile asset height */
+        aspect-ratio: unset !important; /* Discards aspect restrictions to prevent height locking */
     }
 }
 
