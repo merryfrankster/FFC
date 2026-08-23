@@ -31,7 +31,7 @@ div#hero-img {
 /* 📱 MOBILE TIER (0px to 575px) - Updated Height Bypass Rules */
 @media screen and (max-width: 575px) {
     div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
-        background-image: url("https://img77.uenicdn.com/image/upload/v1787033555/business/7a3ba7a4-0209-4f04-9f49-8ac5acfcde1a.jpg") !important;
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787286069/business/6c5d68d6-a6a0-4cb9-beb1-e06fd6b3c748.jpg") !important;
         width: 100% !important;
         height: 100% !important;       /* Forces the element to fill the layout block */
         min-height: 324px !important;   /* Matches your optimized mobile asset height */
@@ -43,7 +43,7 @@ div#hero-img {
    Upgrades your previous patch from a heavy JPEG to an optimized WebP */
 @media screen and (min-width: 576px) and (max-width: 991px) {
     div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
-        background-image: url("https://img77.uenicdn.com/image/upload/v1787033555/business/c58c2eb0-cb0b-4ae7-821a-3800822431eb.jpg") !important;
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787285557/business/0a5aae27-5319-420d-80c5-34c43316586a.jpg") !important;
         height: 100% !important;
         min-height: 550px !important; 
         aspect-ratio: unset !important; 
@@ -54,7 +54,7 @@ div#hero-img {
    Bypasses the CMS's heavy 4K and Retina background-image assets */
 @media screen and (min-width: 992px) {
     div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
-        background-image: url("https://img77.uenicdn.com/image/upload/v1787033555/business/07124f00-42b0-4844-91c0-7da9fc5e104d.jpg") !important;
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787284612/business/cc0662a2-fc22-4a54-aea2-cec1b0849498.jpg") !important;
         height: 100% !important;
         min-height: 650px !important; 
         aspect-ratio: unset !important;
