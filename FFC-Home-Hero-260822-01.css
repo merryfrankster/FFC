@@ -60,3 +60,15 @@ div#hero-img {
         aspect-ratio: unset !important;
     }
 }
+/* ==========================================================================
+   BOB IMAGES — Above-the-fold background image optimization
+   Overrides CMS speedy.uenicdn.com transforms with img77 originals
+   ========================================================================== */
+
+#about-item-168539713-bob-6546766-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/1bd855c7-5b17-49ed-bc77-49e2284a6680.jpg") !important;
+}
+
+#about-item-168539713-bob-6546776-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/e6cc9214-bd00-471b-adf0-cd065a74dad3.jpg") !important;
+}
