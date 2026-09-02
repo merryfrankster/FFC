@@ -1,6 +1,6 @@
 /* ==========================================================================
    HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION
-   Now uses <img> tag instead of CSS background-image
+   Uses sibling <img> tag for immediate preload scanner discovery
    ========================================================================== */
 
 /* 1. STRUCTURAL & VISUAL RESETS */
@@ -12,28 +12,21 @@ div#hero-img::after {
     content: none !important;
 }
 
-/* Kills the crimson flash before image paint */
+/* Kills the crimson flash + ensures parent is positioned for <img> anchor */
 div._1SZF9PNO {
     background-color: transparent !important;
+    position: relative !important;
 }
 
-/* Core container behaviors — position:relative anchors the absolutely positioned <img> */
+/* Hide the CMS background-image — the sibling <img> replaces it */
 div#hero-img {
+    background-image: none !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
     width: 100% !important;
     position: relative !important;
-    overflow: hidden !important;
-}
-
-/* The <img> fills the container, replacing background-size: cover */
-div#hero-img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+    z-index: 1 !important;
 }
 
 /* 2. RESPONSIVE VIEWPORT TIERS — layout only, no background-image */
