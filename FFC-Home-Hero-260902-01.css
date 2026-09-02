@@ -1,0 +1,78 @@
+/* ==========================================================================
+   HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION
+   Now uses <img> tag instead of CSS background-image
+   ========================================================================== */
+
+/* 1. STRUCTURAL & VISUAL RESETS */
+
+/* Eliminate the dark 30% dimming mask overlay completely */
+div#hero-img::after {
+    background-color: transparent !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+
+/* Kills the crimson flash before image paint */
+div._1SZF9PNO {
+    background-color: transparent !important;
+}
+
+/* Core container behaviors — position:relative anchors the absolutely positioned <img> */
+div#hero-img {
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* The <img> fills the container, replacing background-size: cover */
+div#hero-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* 2. RESPONSIVE VIEWPORT TIERS — layout only, no background-image */
+
+/* MOBILE TIER (0px to 575px) */
+@media screen and (max-width: 575px) {
+    div#hero-img {
+        height: 100% !important;
+        min-height: 324px !important;
+        aspect-ratio: unset !important;
+    }
+}
+
+/* TABLET TIER (576px to 991px) */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    div#hero-img {
+        height: 100% !important;
+        min-height: 550px !important;
+        aspect-ratio: unset !important;
+    }
+}
+
+/* DESKTOP TIER (992px and up) */
+@media screen and (min-width: 992px) {
+    div#hero-img {
+        height: 100% !important;
+        min-height: 650px !important;
+        aspect-ratio: unset !important;
+    }
+}
+
+/* ==========================================================================
+   BOB IMAGES — Above-the-fold background image optimization (unchanged)
+   ========================================================================== */
+
+#about-item-168539713-bob-6546766-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/1bd855c7-5b17-49ed-bc77-49e2284a6680.jpg") !important;
+}
+
+#about-item-168539713-bob-6546776-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/e6cc9214-bd00-471b-adf0-cd065a74dad3.jpg") !important;
+}
