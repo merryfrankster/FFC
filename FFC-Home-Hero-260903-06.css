@@ -1,0 +1,103 @@
+/* ==========================================================================
+   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-06
+   Bypasses CMS image-set bloat, retina image loads, and discovery delays
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+   NEW HOOK: PRE-HYDRATION STRUCTIONAL MOLD (BYPASSES REACT CEILING)
+   Forces browser layout engine to reserve responsive boundaries instantly
+   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   ?? MID-TIER MOBILE STRUCTURAL CORRECTIVE OVERRIDES
+   Collapses parent tree inflation and locks vertical aspect proportions
+   ========================================================================== */
+/* ==========================================================================
+   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION 
+   Bypasses CMS image-set bloat, retina image loads, and discovery delays
+   ========================================================================== */
+
+/* 1. STRUCTURAL & VISUAL RESETS */
+
+/* Eliminate the dark 30% dimming mask overlay completely */
+div#hero-img::after {
+    background-color: transparent !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+
+/* Kills the crimson flash before image paint */
+div._1SZF9PNO {
+    background-color: transparent !important;
+}
+
+/* Core background behaviors for the main node */
+div#hero-img {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    display: block !important;
+    opacity: 1 !important;
+}
+
+
+/* 2. RESPONSIVE VIEWPORT TIERS & ASSET TIERS */
+
+/* ?? MOBILE TIER (0px to 575px) - Updated Height Bypass Rules */
+@media screen and (max-width: 575px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787286069/business/6c5d68d6-a6a0-4cb9-beb1-e06fd6b3c748.jpg") !important;
+        width: 100% !important;
+        height: 100% !important;       /* Forces the element to fill the layout block */
+        min-height: 324px !important;   /* Matches your optimized mobile asset height */
+        aspect-ratio: unset !important; /* Discards aspect restrictions to prevent height locking */
+    }
+}
+
+/* ? TABLET TIER (576px to 991px)
+   Upgrades your previous patch from a heavy JPEG to an optimized WebP */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787285557/business/0a5aae27-5319-420d-80c5-34c43316586a.jpg") !important;
+        height: 100% !important;
+        min-height: 550px !important; 
+        aspect-ratio: unset !important; 
+    }
+}
+
+/* --------------------------------------------------------------------------
+   ?? TARGETED TABLET ALIGNMENT FIX (769px to 991px range only)
+   Injects a strict, isolated height boost to force the child background 
+   container wrapper open to match the left column height baseline.
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    div._1SZF9PNO, 
+    div#hero-img, 
+    div._1SZF9PNO div#hero-img {
+        min-height: 610px !important; /* Explicitly forces the image space open to seal the white gap */
+        height: 610px !important;
+    }
+}
+
+/* ?? DESKTOP TIER (992px and up)
+   Bypasses the CMS's heavy 4K and Retina background-image assets */
+@media screen and (min-width: 992px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787284612/business/cc0662a2-fc22-4a54-aea2-cec1b0849498.jpg") !important;
+        height: 100% !important;
+        min-height: 650px !important; 
+        aspect-ratio: unset !important;
+    }
+}
+
+/* ==========================================================================
+   BOB IMAGES — Above-the-fold background image optimization
+   Overrides CMS uenicdn transforms with img77 originals
+   ========================================================================= */
+
+#about-item-168539713-bob-6546766-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/1bd855c7-5b17-49ed-bc77-49e2284a6680.jpg") !important;
+}
+
+#about-item-168539713-bob-6546776-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/e6cc9214-bd00-471b-adf0-cd065a74dad3.jpg") !important;
+}
