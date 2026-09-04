@@ -4,24 +4,38 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   NEW HOOK: PRE-HYDRATION STRUCTIONAL MOLD (BYPASSES REACT CEILING)
+   NEW HOOK: PRE-HYDRATION STRUCTURAL MOLD (BYPASSES REACT CEILING)
    Forces browser layout engine to reserve responsive boundaries instantly
    -------------------------------------------------------------------------- */
 
-/* Force parent responsive grids open before React evaluates */
-main#page-content,
-section#header,
-section#header .MuiGrid-container {
-    display: flex !important;
-    width: 100% !important;
+/* TABLET & DESKTOP TIERS ONLY: Force parent responsive columns open horizontally */
+@media screen and (min-width: 576px) {
+    main#page-content,
+    section#header,
+    section#header .MuiGrid-container {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    div._3l1EKtaY,
+    div._1SZF9PNO {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+    }
 }
 
-/* Force layout height limits onto deep responsive parents */
-div._3l1EKtaY,
-div._1SZF9PNO {
-    display: block !important;
-    width: 100% !important;
-    position: relative !important;
+/* MOBILE TIER ONLY: Force vertical block stacking to prevent layout squashing */
+@media screen and (max-width: 575px) {
+    main#page-content,
+    section#header,
+    section#header .MuiGrid-container,
+    div._3l1EKtaY,
+    div._1SZF9PNO {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+    }
 }
 
 /* Responsive height matching selectors for the structural wrappers */
