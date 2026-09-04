@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-04
+   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-05
    Bypasses CMS image-set bloat, retina image loads, and discovery delays
    ========================================================================== */
 /* --------------------------------------------------------------------------
@@ -10,96 +10,81 @@
    ?? MID-TIER MOBILE STRUCTURAL CORRECTIVE OVERRIDES
    Collapses parent tree inflation and locks vertical aspect proportions
    ========================================================================== */
+/* ==========================================================================
+   ?? PRODUCTION ARCHITECTURE SPECIFICATION: PRE-HYDRATION LAYOUT COMPONENT
+   Enforces perfect vertical proportions and locks CLS at 0 on all tiers
+   ========================================================================== */
 
-/* DUAL-COLUMN DESKTOP TIERS (769px and up): Force parents open horizontally */
+/* 1. DUAL-COLUMN LAYOUTS (769px and up): Engage horizontal flex splits */
 @media screen and (min-width: 769px) {
     main#page-content,
     section#header,
     section#header .MuiGrid-container {
         display: flex !important;
+        align-items: stretch !important; /* FIX: Forces left and right columns to be exactly the same height */
         width: 100% !important;
     }
 
+    /* Force parent grid slots to fill the active vertical space equally */
+    div._3l1EKtaY,
+    div._1SZF9PNO {
+        display: flex !important;       /* Engage flex alignment to stretch children */
+        flex-direction: column !important;
+        width: 100% !important;
+        height: 100% !important;        /* Fills 100% of the vertical row height */
+        min-height: 100% !important;    /* Seals the 991px whitespace gap completely */
+        position: relative !important;
+    }
+}
+
+/* 2. SINGLE-COLUMN LAYOUTS (768px and below): Engage fluid block stacking */
+@media screen and (max-width: 768px) {
+    main#page-content,
+    section#header,
+    section#header .MuiGrid-container,
     div._3l1EKtaY,
     div._1SZF9PNO {
         display: block !important;
         width: 100% !important;
-        position: relative !important;
-    }
-}
-
-/* SINGLE-COLUMN RESPONSIVE TIERS (768px and below): Engage fluid block stacking */
-@media screen and (max-width: 768px) {
-    /* Clear additive stacking limits from the high-contention parent containers */
-    main#page-content,
-    section#header,
-    section#header .MuiGrid-container,
-    div._3l1EKtaY {
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;     /* Restores responsive fluid block distribution */
-        min-height: unset !important; /* Prevents container wrappers from ballooning */
+        height: auto !important;     /* Allows parents to scale fluidly to house both rows */
+        min-height: unset !important; /* Discards additive stacking layout bugs */
         position: relative !important;
     }
 
-    /* Target: The upper text block grid column container */
     div._3jaIrmzG {
         display: block !important;
         width: 100% !important;
         height: auto !important;
-        max-height: unset !important;
-        padding-bottom: 20px !important; /* Spacing margin right above the graphic */
-    }
-
-    /* Target: The inner background image column wrapper */
-    div._1SZF9PNO {
-        display: block !important;
-        width: 100% !important;
-        position: relative !important;
+        padding-bottom: 20px !important; /* Clean whitespace divider above the graphic */
     }
 }
 
-/* 4. SYNCHRONIZED BREAKPOINT IMAGE SPECS
-   Restricts strict height variables strictly to the graphic delivery nodes */
+/* 3. SYNCHRONIZED RESPONSIVE IMAGE PARAMETERS
+   Enforces strict height rules on single columns; inherits fluid layouts on desktop */
 
 /* ?? PHONE TIER: Viewports 575px and under */
 @media screen and (max-width: 575px) {
-    div._1SZF9PNO, 
     div#hero-img {
-        min-height: 324px !important;
+        min-height: 324px !important; /* Perfect phone proportional height scaling */
         height: 324px !important;
     }
 }
 
-/* ?? MID-TIER RESPONSIVE ADJUSTMENT: Viewports 576px to 768px (Resolves the over-stretched view) */
+/* ?? MID-TIER MOBILE COMPONENT: Viewports 576px to 768px */
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    div._1SZF9PNO, 
     div#hero-img {
-        min-height: 380px !important; /* Restricts the visual block height layout bounds */
-        height: 380px !important;     /* Safely contains the full canvas width on screen */
+        min-height: 480px !important; /* Forces the empty container wide open for the image asset */
+        height: 480px !important;
     }
 }
 
-/* ?? STANDARD TABLET / LAPTOP VIEWS: Viewports 769px to 991px */
-@media screen and (min-width: 769px) and (max-width: 991px) {
-    div._1SZF9PNO, 
+/* ?? STANDARD DESKTOP BREAKPOINTS: Viewports 769px and up
+   Inherits full 100% stretching from the parent flexbox tree layout */
+@media screen and (min-width: 769px) {
     div#hero-img {
-        min-height: 550px !important;
-        height: 550px !important;
-    }
-}
-
-/* ??? DESKTOP TIER: Viewports 992px and up */
-@media screen and (min-width: 992px) {
-    main#page-content, 
-    section#header, 
-    section#header .MuiGrid-container {
-        min-height: 650px !important;
-    }
-    div._1SZF9PNO, 
-    div#hero-img {
-        min-height: 650px !important;
-        height: 650px !important;
+        width: 100% !important;
+        height: 100% !important;
+        flex-grow: 1 !important; /* Instructs the image layer to fill the empty column slot */
     }
 }
 
@@ -151,8 +136,7 @@ div#hero-img {
 }
 
 /* ==========================================================================
-   BOB IMAGES — Above-the-fold background image optimization
-   Overrides CMS uenicdn transforms with img77 originals
+   BOB IMAGES — Overrides CMS transforms with img77 originals
    ========================================================================= */
 
 #about-item-168539713-bob-6546766-image {
