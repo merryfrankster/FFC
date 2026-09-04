@@ -8,8 +8,8 @@
    Forces browser layout engine to reserve responsive boundaries instantly
    -------------------------------------------------------------------------- */
 
-/* TABLET & DESKTOP TIERS ONLY: Force parent responsive columns open horizontally */
-@media screen and (min-width: 576px) {
+/* DUAL-COLUMN LAYOUTS (769px and up): Force parents open horizontally */
+@media screen and (min-width: 769px) {
     main#page-content,
     section#header,
     section#header .MuiGrid-container {
@@ -25,8 +25,8 @@
     }
 }
 
-/* MOBILE TIER ONLY: Force vertical block stacking to prevent layout squashing */
-@media screen and (max-width: 575px) {
+/* SINGLE-COLUMN LAYOUTS (768px and below): Force vertical block stacking */
+@media screen and (max-width: 768px) {
     main#page-content,
     section#header,
     section#header .MuiGrid-container,
