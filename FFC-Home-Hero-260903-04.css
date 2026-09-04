@@ -1,0 +1,164 @@
+/* ==========================================================================
+   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-04
+   Bypasses CMS image-set bloat, retina image loads, and discovery delays
+   ========================================================================== */
+/* --------------------------------------------------------------------------
+   NEW HOOK: PRE-HYDRATION STRUCTIONAL MOLD (BYPASSES REACT CEILING)
+   Forces browser layout engine to reserve responsive boundaries instantly
+   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   ?? MID-TIER MOBILE STRUCTURAL CORRECTIVE OVERRIDES
+   Collapses parent tree inflation and locks vertical aspect proportions
+   ========================================================================== */
+
+/* DUAL-COLUMN DESKTOP TIERS (769px and up): Force parents open horizontally */
+@media screen and (min-width: 769px) {
+    main#page-content,
+    section#header,
+    section#header .MuiGrid-container {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    div._3l1EKtaY,
+    div._1SZF9PNO {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+}
+
+/* SINGLE-COLUMN RESPONSIVE TIERS (768px and below): Engage fluid block stacking */
+@media screen and (max-width: 768px) {
+    /* Clear additive stacking limits from the high-contention parent containers */
+    main#page-content,
+    section#header,
+    section#header .MuiGrid-container,
+    div._3l1EKtaY {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;     /* Restores responsive fluid block distribution */
+        min-height: unset !important; /* Prevents container wrappers from ballooning */
+        position: relative !important;
+    }
+
+    /* Target: The upper text block grid column container */
+    div._3jaIrmzG {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: unset !important;
+        padding-bottom: 20px !important; /* Spacing margin right above the graphic */
+    }
+
+    /* Target: The inner background image column wrapper */
+    div._1SZF9PNO {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+}
+
+/* 4. SYNCHRONIZED BREAKPOINT IMAGE SPECS
+   Restricts strict height variables strictly to the graphic delivery nodes */
+
+/* ?? PHONE TIER: Viewports 575px and under */
+@media screen and (max-width: 575px) {
+    div._1SZF9PNO, 
+    div#hero-img {
+        min-height: 324px !important;
+        height: 324px !important;
+    }
+}
+
+/* ?? MID-TIER RESPONSIVE ADJUSTMENT: Viewports 576px to 768px (Resolves the over-stretched view) */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    div._1SZF9PNO, 
+    div#hero-img {
+        min-height: 380px !important; /* Restricts the visual block height layout bounds */
+        height: 380px !important;     /* Safely contains the full canvas width on screen */
+    }
+}
+
+/* ?? STANDARD TABLET / LAPTOP VIEWS: Viewports 769px to 991px */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    div._1SZF9PNO, 
+    div#hero-img {
+        min-height: 550px !important;
+        height: 550px !important;
+    }
+}
+
+/* ??? DESKTOP TIER: Viewports 992px and up */
+@media screen and (min-width: 992px) {
+    main#page-content, 
+    section#header, 
+    section#header .MuiGrid-container {
+        min-height: 650px !important;
+    }
+    div._1SZF9PNO, 
+    div#hero-img {
+        min-height: 650px !important;
+        height: 650px !important;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   RETAINED SYSTEM WORKLOADS: VISUAL & ASSET OVERRIDES
+   -------------------------------------------------------------------------- */
+
+/* Eliminate the dark 30% dimming mask overlay completely */
+div#hero-img::after {
+    background-color: transparent !important;
+    opacity: 0 !important;
+    content: none !important;
+}
+
+/* Kills the crimson flash before image paint */
+div._1SZF9PNO {
+    background-color: transparent !important;
+}
+
+/* Core background behaviors for the main node */
+div#hero-img {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* RESPONSIVE BACKGROUND ASSET SELECTION MATCHING BREAKPOINTS */
+@media screen and (max-width: 575px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787286069/business/6c5d68d6-a6a0-4cb9-beb1-e06fd6b3c748.jpg") !important;
+        aspect-ratio: unset !important;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787285557/business/0a5aae27-5319-420d-80c5-34c43316586a.jpg") !important;
+        aspect-ratio: unset !important;
+    }
+}
+@media screen and (min-width: 992px) {
+    div#hero-img, div#hero-img._3KHit-0K, div._1SZF9PNO div#hero-img {
+        background-image: url("https://img77.uenicdn.com/image/upload/v1787284612/business/cc0662a2-fc22-4a54-aea2-cec1b0849498.jpg") !important;
+        aspect-ratio: unset !important;
+    }
+}
+
+/* ==========================================================================
+   BOB IMAGES — Above-the-fold background image optimization
+   Overrides CMS uenicdn transforms with img77 originals
+   ========================================================================= */
+
+#about-item-168539713-bob-6546766-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/1bd855c7-5b17-49ed-bc77-49e2284a6680.jpg") !important;
+}
+
+#about-item-168539713-bob-6546776-image {
+    background-image: url("https://img77.uenicdn.com/image/upload/v1786911746/business/e6cc9214-bd00-471b-adf0-cd065a74dad3.jpg") !important;
+}
