@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-04
+   ? HERO IMAGE PERFORMANCE & LAYOUT REMEDIATION - 260903-07
    Bypasses CMS image-set bloat, retina image loads, and discovery delays
    ========================================================================== */
 /* --------------------------------------------------------------------------
@@ -9,6 +9,7 @@
 /* ==========================================================================
    ?? MID-TIER MOBILE STRUCTURAL CORRECTIVE OVERRIDES
    Collapses parent tree inflation and locks vertical aspect proportions
+   Corrects tablet whitespace strip
    ========================================================================== */
 
 /* DUAL-COLUMN DESKTOP TIERS (769px and up): Force parents open horizontally */
