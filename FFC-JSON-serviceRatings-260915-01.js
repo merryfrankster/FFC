@@ -8,7 +8,7 @@ const injectServiceRatings = () => {
         '/services/specials/',
         '/services/cheap-local-cars-for-rent-in-maui/',           
         '/services/discounts-on-new-rental-cars-in-maui/'    
-    ];
+    ]; //updated services main page 260915
 
     // Check if the current URL matches any of the paths in our list
     const isMatchingPath = validPaths.some(path => currentPath.includes(path.toLowerCase()));
