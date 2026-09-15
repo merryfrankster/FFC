@@ -4,6 +4,7 @@ const injectServiceRatings = () => {
     
     // Add any additional path patterns to this array
     const validPaths = [
+		'/services',
         '/services/specials/',
         '/services/cheap-local-cars-for-rent-in-maui/',           
         '/services/discounts-on-new-rental-cars-in-maui/'    
