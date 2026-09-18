@@ -1,9 +1,12 @@
 # robots.txt for mauicarrental.biz
-# Last updated: 2026-09-17
+# Last updated: 2026-09-17 14:44 HST
 
 # Allow all crawlers to access all content
 User-agent: *
 Allow: /
+
+@ Rules for AI crawlers
+Content-Signal: search=yes, ai-input=yes, ai-train=yes, use=reference
 
 # Explicitly allow AI crawlers we want
 User-agent: GPTBot
