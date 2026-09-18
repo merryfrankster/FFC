@@ -5,7 +5,7 @@
 User-agent: *
 Allow: /
 
-@ Rules for AI crawlers
+# Rules for AI crawlers
 Content-Signal: search=yes, ai-input=yes, ai-train=yes, use=reference
 
 # Explicitly allow AI crawlers we want
